@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">TB-PTB</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="mahasiswa_txt">
+        <item>Bal</item>
+        <item>Iq</item>
+        <item>Fit</item>
+        <item>Rah</item>
+        <item>Ul</item>
+        <item>Ramad</item>
+        <item>Han</item>
+    </string-array>
+
+    <string-array name="nim_txt">
+        <item>2011521017</item>
+        <item>2011521018</item>
+        <item>2011521019</item>
+        <item>2011521020</item>
+        <item>2011521021</item>
+        <item>2011521022</item>
+        <item>2011521023</item>
+    </string-array>
+
 </resources>

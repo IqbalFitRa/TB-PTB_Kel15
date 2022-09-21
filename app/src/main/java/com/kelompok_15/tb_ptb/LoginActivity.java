@@ -10,19 +10,20 @@ import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button btn;
+    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btn = findViewById(R.id.login);
-        btn.setOnClickListener(new View.OnClickListener() {
+        login = findViewById(R.id.login);
+        login.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
-                startActivity(intent);
+                Intent login = new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(login);
             }
         });
     }

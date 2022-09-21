@@ -16,7 +16,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        btn = findViewById(R.id.listMahasiswa);
+        btn = findViewById(R.id.listMahasiswaMenu);
         btn.setOnClickListener(new View.OnClickListener(){
 
             @Override

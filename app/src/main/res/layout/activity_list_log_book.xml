@@ -19,7 +19,7 @@
         app:navigationIcon="?attr/actionModeCloseDrawable" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/toolbar_list_logbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="List LogBook"
@@ -33,10 +33,12 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_list_logbook"
         android:layout_width="409dp"
-        android:layout_height="673dp"
+        android:layout_height="765dp"
         android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:listitem="@layout/item_row_logbook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

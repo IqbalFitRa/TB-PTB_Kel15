@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailTaMahasiswa">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2DetailTA"
+        android:layout_width="415dp"
+        android:layout_height="244dp"
+        android:background="@color/design_default_color_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewDetailTA"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.222"
+            app:srcCompat="@drawable/profil" />
+
+        <TextView
+            android:id="@+id/namaDetailTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Antoo"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewDetailTA"
+            app:layout_constraintHorizontal_bias="0.725"
+            app:layout_constraintStart_toStartOf="@+id/imageViewDetailTA"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDetailTA" />
+
+        <TextView
+            android:id="@+id/nimDetailTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="201151****"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/namaDetailTA"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="@+id/namaDetailTA"
+            app:layout_constraintTop_toBottomOf="@+id/namaDetailTA" />
+
+        <Button
+            android:id="@+id/buttonDetailTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Nilai"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.869"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contrainLayout3DetailTA"
+        android:layout_width="409dp"
+        android:layout_height="485dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2DetailTA">
+
+        <TextView
+            android:id="@+id/DetailDetailTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Detail TA"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/judulDetailTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Judul TA"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DetailDetailTA" />
+
+        <TextView
+            android:id="@+id/judul2DetailTA"
+            android:layout_width="229dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="24dp"
+            android:text="abcdefghijklmnopqrasuvwxyzabcdefghijklmnopqrasuvwxyz"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.902"
+            app:layout_constraintStart_toEndOf="@+id/judulDetailTA"
+            app:layout_constraintTop_toTopOf="@+id/judulDetailTA" />
+
+        <TextView
+            android:id="@+id/ringkasanDetailTA"
+            android:layout_width="129dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="28dp"
+            android:text="Ringkasan TA"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judul2DetailTA" />
+
+        <TextView
+            android:id="@+id/ringkasan2DetailTA"
+            android:layout_width="230dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="4dp"
+            android:text="abcdefghijklmnopqrasuvwxyzabcdefghijklmnopqrasuvwxyzabcdefghijklmnopqrasuvwxyzabcdefghijklmnopqrasuvwxyzabcdefghijklmnopqrasuvwxyz"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ringkasanDetailTA"
+            app:layout_constraintTop_toTopOf="@+id/ringkasanDetailTA" />
+
+        <TextView
+            android:id="@+id/pembimbing1DetailTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Dosen Pembimbing 1"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ringkasan2DetailTA" />
+
+        <TextView
+            android:id="@+id/pembimbing11DetailTA"
+            android:layout_width="233dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="20dp"
+            android:text="Alexander "
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pembimbing1DetailTA"
+            app:layout_constraintTop_toTopOf="@+id/pembimbing1DetailTA" />
+
+        <TextView
+            android:id="@+id/pembimbing2DetailTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Dosen Pembimbing 2"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pembimbing11DetailTA" />
+
+        <TextView
+            android:id="@+id/pembimbing22DetailTA"
+            android:layout_width="230dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="22dp"
+            android:text="Alexanderr"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pembimbing2DetailTA"
+            app:layout_constraintTop_toTopOf="@+id/pembimbing2DetailTA" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

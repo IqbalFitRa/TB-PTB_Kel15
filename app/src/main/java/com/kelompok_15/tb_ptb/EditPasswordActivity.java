@@ -2,6 +2,7 @@ package com.kelompok_15.tb_ptb;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -16,5 +17,9 @@ public class EditPasswordActivity extends AppCompatActivity {
 
     public void onButtonSimpanGantiPasswordClicked(View view) {
         Toast.makeText(this, "Password Telah Berhasil Diubah", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onButtonBackToPreviousPageClicked1(View view) {
+        startActivity(new Intent(getApplicationContext(), LihatProfileActivity.class));
     }
 }

@@ -9,12 +9,22 @@ import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button buton;
+    Button buton, profil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        profil = findViewById(R.id.profilMenu);
+        profil.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent profilIn = new Intent(MenuActivity.this, LihatProfileActivity.class);
+                startActivity(profilIn);
+            }
+        });
 
 
         buton = findViewById(R.id.listMahasiswaMenu);

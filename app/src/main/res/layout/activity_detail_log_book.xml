@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
-        android:text="@string/ricky_akbar_m_kom"
+        android:text="ricky_akbar_m_kom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pembimbing2TitleDetailLogbook" />
 

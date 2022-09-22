@@ -47,6 +47,18 @@
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
+            android:name=".ListJadwalSeminarDanSidangActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LihatProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
 

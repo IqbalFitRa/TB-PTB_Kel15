@@ -11,7 +11,7 @@
         android:layout_width="409dp"
         android:layout_height="330dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/ic_launcher_background"
+        android:background="@color/design_default_color_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/ic_launcher_foreground" />
+            tools:srcCompat="@drawable/profil" />
 
         <TextView
             android:id="@+id/namaMenu"
@@ -34,8 +34,8 @@
             android:layout_marginTop="20dp"
             android:text="Nama"
             android:textSize="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2Menu"
+            app:layout_constraintStart_toStartOf="@+id/imageView2Menu"
             app:layout_constraintTop_toBottomOf="@+id/imageView2Menu" />
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="NIK"
-            android:textSize="18dp"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="@+id/namaMenu"
             app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="@+id/namaMenu"

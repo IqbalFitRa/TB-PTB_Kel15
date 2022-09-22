@@ -14,13 +14,19 @@
         android:theme="@style/Theme.TBPTB"
         tools:targetApi="31">
         <activity
-            android:name=".ListMahasiswa2Activity"
+            android:name=".MahasiswaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PersetujuanBimbinganActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailTaMahasiswa"
+            android:exported="false" />
+        <activity
+            android:name=".DetailMahasiswaActivity"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ListMahasiswaActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

@@ -9,20 +9,23 @@ import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button btn;
+    Button buton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        btn = findViewById(R.id.listMahasiswaMenu);
-        btn.setOnClickListener(new View.OnClickListener(){
+
+        buton = findViewById(R.id.listMahasiswaMenu);
+        buton.setOnClickListener(new View.OnClickListener()
+
+        {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, ListMahasiswa2Activity.class);
-                startActivity(intent);
+                Intent listMahasiswa = new Intent(MenuActivity.this, MahasiswaActivity.class);
+                startActivity(listMahasiswa);
             }
         });
 

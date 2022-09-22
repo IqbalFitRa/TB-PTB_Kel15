@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ListMahasiswaActivity extends AppCompatActivity {
+public class PersetujuanBimbinganActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_mahasiswa);
+        setContentView(R.layout.activity_persetujuan_bimbingan);
     }
 }

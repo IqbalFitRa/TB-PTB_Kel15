@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutMenu"
+        android:layout_width="409dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/design_default_color_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2Menu"
+            android:layout_width="151dp"
+            android:layout_height="142dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/profil" />
+
+        <TextView
+            android:id="@+id/namaMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Nama"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2Menu"
+            app:layout_constraintStart_toStartOf="@+id/imageView2Menu"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2Menu" />
+
+        <TextView
+            android:id="@+id/nikMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="NIK"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/namaMenu"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="@+id/namaMenu"
+            app:layout_constraintTop_toBottomOf="@+id/namaMenu" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="409dp"
+        android:layout_height="398dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMenu">
+
+        <Button
+            android:id="@+id/profilMenu"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Profil"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/listMahasiswaMenu"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+
+            android:text="List Mahasiswa Bimbingan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilMenu" />
+
+        <Button
+            android:id="@+id/jadwalSeminarMenu"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+
+            android:text="Jadwal Seminar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listMahasiswaMenu" />
+
+        <Button
+            android:id="@+id/jadwalSidangMenu"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+
+            android:text="Jadwal Sidang"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jadwalSeminarMenu" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

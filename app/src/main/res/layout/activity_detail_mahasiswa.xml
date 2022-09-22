@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMahasiswaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2DetailMahasiswa"
+        android:layout_width="415dp"
+        android:layout_height="244dp"
+        android:background="@color/design_default_color_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewDetailMahasiswa"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.256"
+            app:srcCompat="@drawable/profil" />
+
+        <TextView
+            android:id="@+id/namaDetailMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Antoo"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewDetailMahasiswa"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toStartOf="@+id/imageViewDetailMahasiswa"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDetailMahasiswa" />
+
+        <TextView
+            android:id="@+id/nimDetailMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="201151****"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/namaDetailMahasiswa"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="@+id/namaDetailMahasiswa"
+            app:layout_constraintTop_toBottomOf="@+id/namaDetailMahasiswa" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contrainLayout3DetailMahasiswa"
+        android:layout_width="409dp"
+        android:layout_height="485dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2DetailMahasiswa">
+
+        <TextView
+            android:id="@+id/tempattaggallahirDetailMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Tempat / Tanggal Lahir"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tepattanggallahir2DetailMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Padang / 35 - 14 - 2001"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/tempattaggallahirDetailMahasiswa"
+            app:layout_constraintStart_toStartOf="@+id/tempattaggallahirDetailMahasiswa"
+            app:layout_constraintTop_toBottomOf="@+id/tempattaggallahirDetailMahasiswa" />
+
+        <TextView
+            android:id="@+id/emailDetailMahasiswa"
+            android:layout_width="66dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="100dp"
+            android:text="Email"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tempattaggallahirDetailMahasiswa"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/tempattaggallahirDetailMahasiswa"
+            app:layout_constraintTop_toTopOf="@+id/tempattaggallahirDetailMahasiswa" />
+
+        <TextView
+            android:id="@+id/email2DetailMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="antokeren@gmail.com"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/emailDetailMahasiswa"
+            app:layout_constraintStart_toStartOf="@+id/emailDetailMahasiswa"
+            app:layout_constraintTop_toBottomOf="@+id/emailDetailMahasiswa" />
+
+        <TextView
+            android:id="@+id/noHPDetailMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Nomor HP"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/emailDetailMahasiswa"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="@+id/emailDetailMahasiswa"
+            app:layout_constraintTop_toTopOf="@+id/email2DetailMahasiswa" />
+
+        <TextView
+            android:id="@+id/noHP2DetailMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0812129393"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/noHPDetailMahasiswa"
+            app:layout_constraintStart_toStartOf="@+id/noHPDetailMahasiswa"
+            app:layout_constraintTop_toBottomOf="@+id/noHPDetailMahasiswa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

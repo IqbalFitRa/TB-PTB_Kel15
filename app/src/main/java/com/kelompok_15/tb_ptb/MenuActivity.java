@@ -4,27 +4,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-public class LoginActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
-    Button login;
+    Button buton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_menu);
 
-        login = findViewById(R.id.login);
-        login.setOnClickListener(new View.OnClickListener()
+
+        buton = findViewById(R.id.listMahasiswaMenu);
+        buton.setOnClickListener(new View.OnClickListener()
+
         {
+
             @Override
             public void onClick(View view) {
-                Intent login = new Intent(LoginActivity.this, MenuActivity.class);
-                startActivity(login);
+                Intent listMahasiswa = new Intent(MenuActivity.this, MahasiswaActivity.class);
+                startActivity(listMahasiswa);
             }
         });
+
     }
 }

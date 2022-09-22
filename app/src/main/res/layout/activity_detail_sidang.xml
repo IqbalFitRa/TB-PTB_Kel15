@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".DetailSidangActivity">
+
+    <TextView
+        android:id="@+id/judulTADetailSidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Judul TA"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informasiSidang" />
+
+    <TextView
+        android:id="@+id/ringkasanTASidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Ringkasan TA"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulTASidang" />
+
+    <TextView
+        android:id="@+id/pembimbing1TitleSidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Pembimbing 1"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ringkasanTASidang2" />
+
+    <TextView
+        android:id="@+id/pembimbing2TitleSidang2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Pembimbing 2"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pembimbing1TASidang" />
+
+    <TextView
+        android:id="@+id/jadwalSidangTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Jadwal Sidang"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pembimbing2TASidang" />
+
+    <TextView
+        android:id="@+id/lokasiSidangTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Lokasi Sidang"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jadwalSidang" />
+
+    <TextView
+        android:id="@+id/dosenPengujiSidangTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Dosen Penguji"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lokasiSidang" />
+
+    <TextView
+        android:id="@+id/ketuaSidangTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Ketua Sidang"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dosenPengujiSidang" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="#4B81A5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/actionModeCloseDrawable" />
+
+    <ImageView
+        android:id="@+id/fotoMhsDetailSeminar3"
+        android:layout_width="88dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/informasiSidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Informasi Sidang TA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#4B81A5"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fotoMhsDetailSeminar3" />
+
+    <TextView
+        android:id="@+id/namaMhsDetailSidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:text="Kurnia Aziz"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#4B81A5"
+        app:layout_constraintStart_toEndOf="@+id/fotoMhsDetailSeminar3"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <TextView
+        android:id="@+id/nimMhsDetailSidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="1811522002"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/fotoMhsDetailSeminar3"
+        app:layout_constraintTop_toBottomOf="@+id/namaMhsDetailSidang" />
+
+    <TextView
+        android:id="@+id/jurusanMhsDetailSidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Sistem Informasi"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/fotoMhsDetailSeminar3"
+        app:layout_constraintTop_toBottomOf="@+id/nimMhsDetailSidang" />
+
+    <TextView
+        android:id="@+id/detailSidangTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:text="Detail Sidang"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <TextView
+        android:id="@+id/judulTASidang"
+        android:layout_width="373dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulTADetailSidang"
+        tools:text="@tools:sample/lorem/random[2]" />
+
+    <TextView
+        android:id="@+id/ringkasanTASidang2"
+        android:layout_width="373dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ringkasanTASidang"
+        tools:text="@tools:sample/lorem/random[2]" />
+
+    <TextView
+        android:id="@+id/pembimbing1TASidang"
+        android:layout_width="378dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:text="Husnil Kamil, M.T"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pembimbing1TitleSidang" />
+
+    <TextView
+        android:id="@+id/pembimbing2TASidang"
+        android:layout_width="378dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:text="Ricky Akbar, M.Kom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pembimbing2TitleSidang2" />
+
+    <TextView
+        android:id="@+id/jadwalSidang"
+        android:layout_width="378dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jadwalSidangTitle"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+    <TextView
+        android:id="@+id/lokasiSidang"
+        android:layout_width="378dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:text="Ruang Seminar JSI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lokasiSidangTitle" />
+
+    <TextView
+        android:id="@+id/dosenPengujiSidang"
+        android:layout_width="378dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:text="Wahyudi, M.T"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dosenPengujiSidangTitle" />
+
+    <TextView
+        android:id="@+id/ketuaSidang"
+        android:layout_width="378dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:text="Wahyudi, M.T"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ketuaSidangTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

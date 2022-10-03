@@ -6,22 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".ListJadwalSeminarDanSidangActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar6"
+        android:layout_width="413dp"
+        android:layout_height="56dp"
+        android:background="#4B81A5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/jadwalSeminarnSidang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="92dp"
+        android:text="Jadwal Seminar dan Sidang"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/seminar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="68dp"
         android:text="Seminar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/nimMahasiswa1"
-        app:layout_constraintTop_toBottomOf="@+id/jadwalSeminarnSidang" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar6" />
 
     <Button
         android:id="@+id/sidang1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="47dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="32dp"
         android:text="sidang"
@@ -68,8 +93,8 @@
 
     <Button
         android:id="@+id/sidang2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="45dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="32dp"
         android:text="sidang"
@@ -79,24 +104,15 @@
         app:layout_constraintTop_toBottomOf="@+id/seminar4" />
 
     <TextView
-        android:id="@+id/jadwalSeminarnSidang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Jadwal Seminar dan Sidang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/tglSidang1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="Senin, 12 September 2022"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jadwalSeminarnSidang" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar6" />
 
     <ImageView
         android:id="@+id/avaMahasiswa1"

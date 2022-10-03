@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageViewMahasiswa"
+            android:id="@+id/imageViewPB"
             android:layout_width="55dp"
             android:layout_height="62dp"
             android:layout_marginStart="16dp"
@@ -24,7 +24,7 @@
             app:srcCompat="@drawable/avatar" />
 
         <TextView
-            android:id="@+id/textViewMahasiswaList"
+            android:id="@+id/textViewPB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -32,27 +32,27 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.106"
-            app:layout_constraintStart_toEndOf="@+id/imageViewMahasiswa"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPB"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2nimMahasiswaList"
+            android:id="@+id/textView2PB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="201152****"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textViewMahasiswaList"
-            app:layout_constraintTop_toBottomOf="@+id/textViewMahasiswaList" />
+            app:layout_constraintStart_toStartOf="@+id/textViewPB"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPB" />
 
         <Button
-            android:id="@+id/DetailTAMahasiswaList"
+            android:id="@+id/TerimaPB"
             android:layout_width="69dp"
             android:layout_height="39dp"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="48dp"
-            android:text="Detail TA"
+            android:text="Terima"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,15 +60,17 @@
             app:layout_constraintVertical_bias="0.188" />
 
         <Button
-            android:id="@+id/DetailMahasiswaList"
-            android:layout_width="112dp"
+            android:id="@+id/TolakPB"
+            android:layout_width="69dp"
             android:layout_height="39dp"
-            android:text="Detail Mahasiswa"
+            android:layout_marginEnd="16dp"
+            android:text="Tolak"
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/DetailTAMahasiswaList"
-            app:layout_constraintStart_toStartOf="@+id/DetailTAMahasiswaList"
-            app:layout_constraintTop_toBottomOf="@+id/DetailTAMahasiswaList"
+            app:layout_constraintEnd_toEndOf="@+id/TerimaPB"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/TerimaPB"
+            app:layout_constraintTop_toBottomOf="@+id/TerimaPB"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

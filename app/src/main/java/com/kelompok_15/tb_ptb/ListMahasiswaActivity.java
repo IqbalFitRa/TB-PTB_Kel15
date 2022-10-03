@@ -28,7 +28,7 @@ public class ListMahasiswaActivity extends AppCompatActivity {
         bimbingan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent bimbinganin = new Intent(ListMahasiswaActivity.this, PersetujuanBimbinganActivity.class);
+                Intent bimbinganin = new Intent(ListMahasiswaActivity.this, ListPermintaanBimbinganActivity.class);
                 startActivity(bimbinganin);
             }
         });

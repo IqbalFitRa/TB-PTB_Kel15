@@ -19,6 +19,7 @@ public class AdapterPB extends RecyclerView.Adapter <AdapterPB.PBViewHolder>{
     ArrayList<PermintaanBimbingan> perBim = new ArrayList<>();
 
     public AdapterPB (ArrayList<PermintaanBimbingan> perBim){
+
         this.perBim = perBim;
     }
 
@@ -32,6 +33,11 @@ public class AdapterPB extends RecyclerView.Adapter <AdapterPB.PBViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull PBViewHolder holder, int position) {
+
+        PermintaanBimbingan pb = perBim.get(position);
+        holder.namaPB.setText(pb.getNama());
+        holder.nimPB.setText(pb.getNim());
+        holder.imageProfilPB.setImageResource(R.drawable.profil);
 
     }
 
@@ -48,6 +54,9 @@ public class AdapterPB extends RecyclerView.Adapter <AdapterPB.PBViewHolder>{
         public PBViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            imageProfilPB = itemView.findViewById(R.id.imageViewPB);
+            namaPB = itemView.findViewById(R.id.textViewPB);
+            nimPB = itemView.findViewById(R.id.textView2PB);
 
         }
     }

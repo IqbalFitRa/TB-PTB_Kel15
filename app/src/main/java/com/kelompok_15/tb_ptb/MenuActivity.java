@@ -34,7 +34,7 @@ public class MenuActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent listMahasiswa = new Intent(MenuActivity.this, MahasiswaActivity.class);
+                Intent listMahasiswa = new Intent(MenuActivity.this, ListMahasiswaActivity.class);
                 startActivity(listMahasiswa);
             }
         });

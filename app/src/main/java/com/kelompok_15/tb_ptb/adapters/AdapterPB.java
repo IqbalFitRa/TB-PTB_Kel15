@@ -46,6 +46,7 @@ public class AdapterPB extends RecyclerView.Adapter <AdapterPB.PBViewHolder>{
         return perBim.size();
     }
 
+
     public class PBViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView imageProfilPB;

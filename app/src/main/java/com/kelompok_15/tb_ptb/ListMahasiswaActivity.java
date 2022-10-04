@@ -84,6 +84,8 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
 
     @Override
     public void onItemMahasiswaClick(Mahasiswa mahasiswa) {
-        Toast.makeText(this, "OK....", Toast.LENGTH_SHORT).show();
+        Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
+        startActivity(listmahasiswa);
+        //Toast.makeText(this, "OK....", Toast.LENGTH_SHORT).show();
     }
 }

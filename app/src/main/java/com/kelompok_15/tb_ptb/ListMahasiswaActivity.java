@@ -88,4 +88,5 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
         startActivity(listmahasiswa);
         //Toast.makeText(this, "OK....", Toast.LENGTH_SHORT).show();
     }
+
 }

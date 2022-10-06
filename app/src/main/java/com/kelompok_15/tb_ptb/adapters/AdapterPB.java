@@ -17,10 +17,21 @@ import java.util.ArrayList;
 public class AdapterPB extends RecyclerView.Adapter <AdapterPB.PBViewHolder>{
 
     ArrayList<PermintaanBimbingan> perBim = new ArrayList<>();
+    ItemPBClickListener listenerPB;
 
     public AdapterPB (ArrayList<PermintaanBimbingan> perBim){
 
         this.perBim = perBim;
+    }
+
+    public AdapterPB(ArrayList<PermintaanBimbingan> perBim, ItemPBClickListener listenerPB) {
+        this.perBim = perBim;
+        this.listenerPB = listenerPB;
+    }
+
+    public void setListenerPB(ItemPBClickListener listenerPB) {
+
+        this.listenerPB = listenerPB;
     }
 
     @NonNull
@@ -43,7 +54,13 @@ public class AdapterPB extends RecyclerView.Adapter <AdapterPB.PBViewHolder>{
 
     @Override
     public int getItemCount() {
+
         return perBim.size();
+    }
+
+
+    public  interface ItemPBClickListener{
+        void onItemPBClick(PermintaanBimbingan permintaanBimbingan);
     }
 
 
@@ -58,6 +75,14 @@ public class AdapterPB extends RecyclerView.Adapter <AdapterPB.PBViewHolder>{
             imageProfilPB = itemView.findViewById(R.id.imageViewPB);
             namaPB = itemView.findViewById(R.id.textViewPB);
             nimPB = itemView.findViewById(R.id.textView2PB);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    PermintaanBimbingan permintaanBimbingan = perBim.get(getBindingAdapterPosition());
+                    listenerPB.onItemPBClick(permintaanBimbingan);
+                }
+            });
 
         }
     }

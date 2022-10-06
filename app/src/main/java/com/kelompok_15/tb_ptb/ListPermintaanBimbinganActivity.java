@@ -14,7 +14,7 @@ import com.kelompok_15.tb_ptb.models.PermintaanBimbingan;
 
 import java.util.ArrayList;
 
-public class ListPermintaanBimbinganActivity extends AppCompatActivity {
+public class ListPermintaanBimbinganActivity extends AppCompatActivity implements AdapterPB.ItemPBClickListener{
 
     private RecyclerView rv_permintaanBimbingan;
 
@@ -26,6 +26,7 @@ public class ListPermintaanBimbinganActivity extends AppCompatActivity {
         rv_permintaanBimbingan = findViewById(R.id.rv_pb);
 
         AdapterPB adapter = new AdapterPB(getPermintaanBimbingan());
+        adapter.setListenerPB(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rv_permintaanBimbingan.setLayoutManager(layoutManager);
@@ -51,5 +52,11 @@ public class ListPermintaanBimbinganActivity extends AppCompatActivity {
                 "2011525532"
         ));
         return listPB;
+    }
+
+    @Override
+    public void onItemPBClick(PermintaanBimbingan permintaanBimbingan) {
+        Intent listpb = new Intent(this, TolakTerimaActivity.class);
+        startActivity(listpb);
     }
 }

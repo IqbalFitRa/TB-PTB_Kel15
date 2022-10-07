@@ -8,12 +8,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayoutMenu"
-        android:layout_width="409dp"
-        android:layout_height="330dp"
-        android:layout_marginTop="4dp"
-        android:background="@color/design_default_color_secondary"
+        android:layout_width="337dp"
+        android:layout_height="298dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -61,47 +60,38 @@
 
         <Button
             android:id="@+id/profilMenu"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="75dp"
-            android:text="Profil"
+            android:layout_marginTop="40dp"
 
+            android:text="Profil"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/listMahasiswaMenu"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="75dp"
 
             android:text="List Mahasiswa Bimbingan"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profilMenu" />
 
         <Button
             android:id="@+id/jadwalSeminarMenu"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="75dp"
 
-            android:text="Jadwal Seminar"
+            android:text="List Seminar dan sidang"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/listMahasiswaMenu" />
 
-        <Button
-            android:id="@+id/jadwalSidangMenu"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-
-            android:text="Jadwal Sidang"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/jadwalSeminarMenu" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

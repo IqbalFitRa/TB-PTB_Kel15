@@ -26,8 +26,14 @@
             android:name=".ListJadwalSeminarActivity"
             android:exported="false" />
         <activity
+            android:name=".TolakTerimaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ListPermintaanBimbinganActivity"
+            android:exported="true" />
+        <activity
             android:name=".ListMahasiswaActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".InputNilaiActivity"
             android:exported="false" />
@@ -48,9 +54,6 @@
             android:exported="false" />
         <activity
             android:name=".MahasiswaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PersetujuanBimbinganActivity"
             android:exported="false" />
         <activity
             android:name=".DetailTaMahasiswa"

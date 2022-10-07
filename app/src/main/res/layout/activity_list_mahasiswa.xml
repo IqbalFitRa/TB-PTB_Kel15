@@ -48,9 +48,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_listmahasiswa"
-        android:layout_width="415dp"
-        android:layout_height="515dp"
-        app:layout_constraintBottom_toTopOf="@+id/permintaanBimbingan2ListMahasiswa"
+        android:layout_width="417dp"
+        android:layout_height="633dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2ListMahasiswa"

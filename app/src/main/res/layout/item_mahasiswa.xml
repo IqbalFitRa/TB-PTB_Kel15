@@ -46,29 +46,5 @@
             app:layout_constraintStart_toStartOf="@+id/textViewMahasiswaList"
             app:layout_constraintTop_toBottomOf="@+id/textViewMahasiswaList" />
 
-        <Button
-            android:id="@+id/DetailTAMahasiswaList"
-            android:layout_width="69dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="48dp"
-            android:text="Detail TA"
-            android:textSize="8sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.188" />
-
-        <Button
-            android:id="@+id/DetailMahasiswaList"
-            android:layout_width="112dp"
-            android:layout_height="39dp"
-            android:text="Detail Mahasiswa"
-            android:textSize="8sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/DetailTAMahasiswaList"
-            app:layout_constraintStart_toStartOf="@+id/DetailTAMahasiswaList"
-            app:layout_constraintTop_toBottomOf="@+id/DetailTAMahasiswaList"
-            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

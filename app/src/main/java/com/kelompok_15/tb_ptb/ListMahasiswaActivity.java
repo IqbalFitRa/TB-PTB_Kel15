@@ -8,13 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.kelompok_15.tb_ptb.adapters.AdapterMahasiswa;
 import com.kelompok_15.tb_ptb.models.Mahasiswa;
 
 import java.util.ArrayList;
 
-public class ListMahasiswaActivity extends AppCompatActivity {
+public class ListMahasiswaActivity extends AppCompatActivity implements AdapterMahasiswa.ItemMahasiswaClickListener{
 
     private RecyclerView rvMahasiswa;
     Button bimbingan;
@@ -28,7 +29,7 @@ public class ListMahasiswaActivity extends AppCompatActivity {
         bimbingan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent bimbinganin = new Intent(ListMahasiswaActivity.this, PersetujuanBimbinganActivity.class);
+                Intent bimbinganin = new Intent(ListMahasiswaActivity.this, ListPermintaanBimbinganActivity.class);
                 startActivity(bimbinganin);
             }
         });
@@ -36,6 +37,7 @@ public class ListMahasiswaActivity extends AppCompatActivity {
         rvMahasiswa = findViewById(R.id.rv_listmahasiswa);
 
         AdapterMahasiswa adapter = new AdapterMahasiswa(getMahasiswa());
+        adapter.setListenerIM(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvMahasiswa.setLayoutManager(layoutManager);
@@ -79,4 +81,12 @@ public class ListMahasiswaActivity extends AppCompatActivity {
 
         return listMahasiswa;
     }
+
+    @Override
+    public void onItemMahasiswaClick(Mahasiswa mahasiswa) {
+        Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
+        startActivity(listmahasiswa);
+        //Toast.makeText(this, "OK....", Toast.LENGTH_SHORT).show();
+    }
+
 }

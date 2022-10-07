@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewjadwalseminar1"
+        android:layout_width="415dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/square" />
+
+    <TextView
+        android:id="@+id/textViewjadwalseminar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Detail"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ImageView
+        android:id="@+id/imageViewjadwalseminar3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewjadwalseminar1"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewjadwalseminar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Kurnia Aziz"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/imageViewjadwalseminar3"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewjadwalseminar1" />
+
+    <TextView
+        android:id="@+id/textViewjadwalseminar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="1811522002"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/imageViewjadwalseminar3"
+        app:layout_constraintTop_toBottomOf="@+id/textViewjadwalseminar2" />
+
+    <TextView
+        android:id="@+id/textViewjadwalseminar4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
+        android:text="Judul Tugas Akhir:"
+        android:textColor="#27399E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRekomendasijadwalseminar" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLinejadwalseminar2"
+        android:layout_width="317dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="44dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Sistem Informasi Geografis Pengelompokan Jenis Penyakit Ganas di Rumah Sakit Rr. Soetomo Surabaya Berbasis Web"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewjadwalseminar4" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLinejadwalseminar3"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Husnil Kamil, M.T"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewjadwalseminar5" />
+
+    <TextView
+        android:id="@+id/textViewjadwalseminar5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:text="Dosen Pembinbing:"
+        android:textColor="#27399E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLinejadwalseminar2" />
+
+    <TextView
+        android:id="@+id/textViewjadwalseminar6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:text="Jadwal:"
+        android:textColor="#27399E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLinejadwalseminar3" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLinejadwalseminar4"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:text="Senin, 6 juni 2022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewjadwalseminar6" />
+
+    <TextView
+        android:id="@+id/textViewjadwalseminar7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:text="Dosen Penguji:"
+        android:textColor="#27399E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLinejadwalseminar4" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLinejadwalseminar5"
+        android:layout_width="314dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Ricky Akbar, M.T "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewjadwalseminar7" />
+
+    <Button
+        android:id="@+id/ButtonRekomendasijadwalseminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Tambah Rekomendasi"
+        app:layout_constraintStart_toEndOf="@+id/imageViewjadwalseminar3"
+        app:layout_constraintTop_toBottomOf="@+id/textViewjadwalseminar3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

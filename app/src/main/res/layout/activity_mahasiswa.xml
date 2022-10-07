@@ -77,10 +77,10 @@
 
         <TextView
             android:id="@+id/textView2MahasiswaList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="35dp"
+            android:layout_height="13dp"
             android:layout_marginTop="16dp"
-            android:text="Antoo"
+            android:text="Anton"
             android:textSize="15dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

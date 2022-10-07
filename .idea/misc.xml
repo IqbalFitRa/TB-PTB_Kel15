@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_log_book.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_seminar.xml" value="0.3625" />
@@ -31,8 +30,6 @@
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/item_mahasiswa.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/item_permintaanbimbingan.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/list_nilai.xml" value="0.2866847826086957" />
-
-
         <entry key="..\:/Users/User/StudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_log_book.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/User/StudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.15670289855072464" />
         <entry key="..\:/Users/User/StudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_seminar.xml" value="0.15670289855072464" />
@@ -55,32 +52,6 @@
         <entry key="..\:/Users/User/StudioProjects/TB-PTB_Kel15/app/src/main/res/layout/item_mahasiswa.xml" value="0.16847826086956522" />
         <entry key="..\:/Users/User/StudioProjects/TB-PTB_Kel15/app/src/main/res/layout/item_permintaanbimbingan.xml" value="0.19293478260869565" />
         <entry key="..\:/Users/User/StudioProjects/TB-PTB_Kel15/app/src/main/res/layout/list_nilai.xml" value="0.20416666666666666" />
-
-        <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/drawable/ic_baseline_featured_play_list_24.xml" value="0.184" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_log_book.xml" value="0.22" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_form_batal.xml" value="0.22" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_input_nilai.xml" value="0.12952898550724637" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_list_log_book.xml" value="0.22" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/item_card_logbook.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/item_row_logbook.xml" value="0.16666666666666666" />
-
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.22" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_seminar.xml" value="0.2" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_ta_mahasiswa.xml" value="0.2" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_list_mahasiswa.xml" value="0.22" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_list_permintaanbimbingan.xml" value="0.16666666666666666" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_mahasiswa.xml" value="0.2" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_menu.xml" value="0.2" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_persetujuan_bimbingan.xml" value="0.3333333333333333" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_tolak_terima.xml" value="0.22" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_card_logbook.xml" value="0.2" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_mahasiswa.xml" value="0.3333333333333333" />
-
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_permintaanbimbingan.xml" value="0.4466666666666667" />
-
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_permintaanbimbingan.xml" value="0.22" />
-
         <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/drawable/ic_baseline_featured_play_list_24.xml" value="0.184" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_log_book.xml" value="0.22" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_seminar.xml" value="0.22" />
@@ -91,16 +62,24 @@
         <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/item_card_logbook.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/item_row_logbook.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/acer/AndroidStudioProjects/TB-PTB_Kel15/app/src/main/res/layout/list_nilai.xml" value="0.13269927536231885" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_ta_mahasiswa.xml" value="0.2" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.22" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_seminar.xml" value="0.2" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_ta_mahasiswa.xml" value="0.22" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_list_jadwal_sidang.xml" value="0.2" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_list_log_book.xml" value="0.2" />
         <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_list_mahasiswa.xml" value="0.22" />
         <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_list_permintaanbimbingan.xml" value="0.19895833333333332" />
         <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_mahasiswa.xml" value="0.2" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_menu.xml" value="0.2" />
         <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_persetujuan_bimbingan.xml" value="0.2" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_rekomendasi_sidang.xml" value="0.2" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/activity_tolak_terima.xml" value="0.22" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_card_logbook.xml" value="0.2" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_jadwal_seminar_dan_sidang.xml" value="0.2" />
         <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_mahasiswa.xml" value="0.3333333333333333" />
-        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_permintaanbimbingan.xml" value="0.4466666666666667" />
-
-
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/item_permintaanbimbingan.xml" value="0.22" />
+        <entry key="..\:/belajar_AndroidStudio/TB-PTB_Kel15/app/src/main/res/layout/list_nilai.xml" value="0.2" />
         <entry key="..\:/belajar_AndroidStudio/TBPTB/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1785" />
         <entry key="..\:/belajar_AndroidStudio/TBPTB/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1785" />
         <entry key="..\:/belajar_AndroidStudio/TBPTB/app/src/main/res/drawable/ic_menu_camera.xml" value="0.158" />

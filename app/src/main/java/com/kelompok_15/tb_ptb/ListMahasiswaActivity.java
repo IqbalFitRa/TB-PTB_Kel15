@@ -78,6 +78,21 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
                 "MantapNgkError",
                 "2011524114"
         ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "Errordikit",
+                "2011524133"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "Pogramrunning",
+                "2011524521"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "Brodokalah",
+                "2011525321"
+        ));
 
         return listMahasiswa;
     }

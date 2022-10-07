@@ -6,6 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".DetailLogBookActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewMhsLogbook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_detail_logbook">
+
+        <ImageView
+            android:id="@+id/fotoMhsDetailLogbook"
+            android:layout_width="88dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            tools:srcCompat="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/nimMhsDetailLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="45dp"
+            android:text="1811522002"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/namaMhsDetailLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="10dp"
+            android:text="Kurnia Aziz"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#4B81A5" />
+
+        <TextView
+            android:id="@+id/jurusanMhsDetailLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="16dp"
+            android:text="Sistem Informasi"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/pembimbing2DetailLogbook"
         android:layout_width="wrap_content"
@@ -144,7 +196,7 @@
         android:id="@+id/detailLogbookTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="Detail Logbook Bimbingan"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#4B81A5"
@@ -152,49 +204,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fotoMhsDetailLogbook" />
-
-    <TextView
-        android:id="@+id/namaMhsDetailLogbook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
-        android:text="Kurnia Aziz"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#4B81A5"
-        app:layout_constraintStart_toEndOf="@+id/fotoMhsDetailLogbook"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_detail_logbook" />
-
-    <TextView
-        android:id="@+id/nimMhsDetailLogbook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:text="1811522002"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/fotoMhsDetailLogbook"
-        app:layout_constraintTop_toBottomOf="@+id/namaMhsDetailLogbook" />
-
-    <TextView
-        android:id="@+id/jurusanMhsDetailLogbook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:text="Sistem Informasi"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toEndOf="@+id/fotoMhsDetailLogbook"
-        app:layout_constraintTop_toBottomOf="@+id/nimMhsDetailLogbook" />
-
-    <ImageView
-        android:id="@+id/fotoMhsDetailLogbook"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_detail_logbook"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/cardViewMhsLogbook" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_detail_logbook"
@@ -204,22 +214,19 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="?attr/actionModeCloseDrawable" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/toolbar_title_detail_logbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
         android:text="Detail LogBook"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_detail_logbook"
+        app:layout_constraintStart_toStartOf="@+id/toolbar_detail_logbook"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button

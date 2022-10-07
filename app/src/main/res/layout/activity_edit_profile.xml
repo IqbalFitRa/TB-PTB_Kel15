@@ -47,12 +47,13 @@
         android:id="@+id/editNoHP"
         android:layout_width="220dp"
         android:layout_height="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="phone"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/noHP2"
         app:layout_constraintTop_toBottomOf="@+id/noHP2" />
 
     <TextView
@@ -62,9 +63,10 @@
         android:layout_marginTop="16dp"
         android:text="Status Dosen"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TTLDosen3"
         app:layout_constraintTop_toBottomOf="@+id/TTLDosen3" />
 
     <TextView
@@ -73,21 +75,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Payakumbuh, 18 Januari 1982"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TTL3"
         app:layout_constraintTop_toBottomOf="@+id/TTL3" />
 
     <TextView
         android:id="@+id/noHP2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="49dp"
+        android:layout_height="18dp"
         android:layout_marginTop="16dp"
         android:text="No. HP"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editEmail"
         app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
     <TextView
@@ -97,18 +101,20 @@
         android:layout_marginTop="16dp"
         android:text="Email"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/NIPDosen3"
         app:layout_constraintTop_toBottomOf="@+id/NIPDosen3" />
 
     <TextView
         android:id="@+id/nama2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:text="Nama"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,21 +127,23 @@
         android:layout_marginTop="16dp"
         android:text="Tempat Tanggal Lahir"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/namaDosen2"
         app:layout_constraintTop_toBottomOf="@+id/namaDosen2" />
 
     <EditText
         android:id="@+id/editEmail"
         android:layout_width="218dp"
         android:layout_height="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email2"
         app:layout_constraintTop_toBottomOf="@+id/email2" />
 
     <TextView
@@ -144,9 +152,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="PNS - Dosen Sistem Informasi"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.209"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/status2"
         app:layout_constraintTop_toBottomOf="@+id/status2" />
 
     <TextView
@@ -156,9 +165,10 @@
         android:layout_marginTop="16dp"
         android:text="NIP"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/statusDosen2"
         app:layout_constraintTop_toBottomOf="@+id/statusDosen2" />
 
     <TextView
@@ -167,9 +177,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="198201182008121002"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/NIP3"
         app:layout_constraintTop_toBottomOf="@+id/NIP3" />
 
     <TextView
@@ -178,9 +189,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Husnil Kamil, M.T"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nama2"
         app:layout_constraintTop_toBottomOf="@+id/nama2" />
 
     <Button

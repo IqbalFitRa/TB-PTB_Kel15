@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewsidang1"
+        android:layout_width="415dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/square" />
+
+    <TextView
+        android:id="@+id/textViewsidang1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Detail"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewsidang1"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textsidang1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="Kurnia Aziz"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewsidang1" />
+
+    <TextView
+        android:id="@+id/textsidang3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Judul Tugas Akhir:"
+        android:textColor="#27399E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsidang1" />
+
+    <TextView
+        android:id="@+id/textsidang2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1811522002"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textsidang1"
+        app:layout_constraintTop_toBottomOf="@+id/textsidang1" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLinesidang1"
+        android:layout_width="317dp"
+        android:layout_height="88dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Sistem Informasi Geografis Pengelompokan Jenis Penyakit Ganas di Rumah Sakit Rr. Soetomo Surabaya Berbasis Web"
+        app:layout_constraintStart_toStartOf="@+id/textsidang3"
+        app:layout_constraintTop_toBottomOf="@+id/textsidang3" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLinesidang2"
+        android:layout_width="316dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Husnil Kamil, M.T"
+        app:layout_constraintStart_toStartOf="@+id/textsidang4"
+        app:layout_constraintTop_toBottomOf="@+id/textsidang4" />
+
+    <TextView
+        android:id="@+id/textsidang4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dosen Pembinbing:"
+        android:textColor="#27399E"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLinesidang1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLinesidang1" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLinesidang4"
+        android:layout_width="314dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="Ricky Akbar, M.T "
+        app:layout_constraintStart_toStartOf="@+id/textsidang6"
+        app:layout_constraintTop_toBottomOf="@+id/textsidang6" />
+
+    <TextView
+        android:id="@+id/textsidang6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Dosen Penguji:"
+        android:textColor="#27399E"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLinesidang3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLinesidang3" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLinesidang3"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:text="Senin, 6 juni 2022"
+        app:layout_constraintStart_toStartOf="@+id/textsidang5"
+        app:layout_constraintTop_toBottomOf="@+id/textsidang5" />
+
+    <TextView
+        android:id="@+id/textsidang5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Jadwal:"
+        android:textColor="#27399E"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLinesidang2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLinesidang2" />
+
+    <Button
+        android:id="@+id/buttonsidang1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="155dp"
+        android:text="Penilaian"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textsidang2"
+        app:layout_constraintTop_toBottomOf="@+id/textsidang2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

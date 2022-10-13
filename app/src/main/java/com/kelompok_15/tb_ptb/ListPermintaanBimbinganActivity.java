@@ -51,6 +51,16 @@ public class ListPermintaanBimbinganActivity extends AppCompatActivity implement
                 "Rambutminsatu",
                 "2011525532"
         ));
+        listPB.add(new PermintaanBimbingan(
+                null,
+                "Rambutmindua",
+                "2011525532"
+        ));
+        listPB.add(new PermintaanBimbingan(
+                null,
+                "Rambutminsatupuluh",
+                "2011525532"
+        ));
         return listPB;
     }
 

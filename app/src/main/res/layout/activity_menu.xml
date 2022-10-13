@@ -20,11 +20,13 @@
             android:id="@+id/imageView2Menu"
             android:layout_width="151dp"
             android:layout_height="142dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/profil" />
+            app:layout_constraintVertical_bias="0.171"
+            tools:srcCompat="@drawable/avatar" />
 
         <TextView
             android:id="@+id/namaMenu"

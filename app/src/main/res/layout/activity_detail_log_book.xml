@@ -60,11 +60,11 @@
 
     <TextView
         android:id="@+id/pembimbing2DetailLogbook"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
-        android:text="ricky_akbar_m_kom"
+        android:text="Ricky Akbar, M.Kom."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pembimbing2TitleDetailLogbook" />
 
@@ -118,7 +118,7 @@
 
     <TextView
         android:id="@+id/pembimbing1DetailLogbook"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
@@ -138,7 +138,7 @@
 
     <TextView
         android:id="@+id/uraianDetailLogbook"
-        android:layout_width="247dp"
+        android:layout_width="match_parent"
         android:layout_height="21dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
@@ -159,7 +159,7 @@
 
     <TextView
         android:id="@+id/tanggalDetailLogbook"
-        android:layout_width="125dp"
+        android:layout_width="match_parent"
         android:layout_height="19dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"

@@ -17,9 +17,15 @@ import java.util.ArrayList;
 public class AdapterJadwal extends RecyclerView.Adapter<AdapterJadwal.JadwalViewHolder>{
 
     ArrayList<JadwalSeminardanSidang> ListJadwal = new ArrayList<>();
+    ItemJadwalClickListener listener;
 
     public AdapterJadwal(ArrayList<JadwalSeminardanSidang> listJadwal) {
         ListJadwal = listJadwal;
+    }
+
+
+    public void setListener(ItemJadwalClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -44,7 +50,11 @@ public class AdapterJadwal extends RecyclerView.Adapter<AdapterJadwal.JadwalView
         return ListJadwal.size();
     }
 
-    public class JadwalViewHolder extends RecyclerView.ViewHolder {
+    public interface ItemJadwalClickListener{
+        void onItemJadwalClick(JadwalSeminardanSidang jadwal);
+    }
+
+    public class JadwalViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView imageMahasiswa;
         public TextView namaMahasiswa, nimMahasiswa, tglSidang;
@@ -55,6 +65,14 @@ public class AdapterJadwal extends RecyclerView.Adapter<AdapterJadwal.JadwalView
             namaMahasiswa = itemView.findViewById(R.id.namaMahasiswa);
             nimMahasiswa = itemView.findViewById(R.id.nimMahasiswa);
             tglSidang = itemView.findViewById(R.id.tglSidang);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            JadwalSeminardanSidang jadwal = ListJadwal.get(getAdapterPosition());
+            listener.onItemJadwalClick(jadwal);
         }
     }
 }

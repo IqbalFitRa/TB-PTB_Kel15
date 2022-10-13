@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.kelompok_15.tb_ptb.adapters.AdapterJadwal;
@@ -11,7 +12,7 @@ import com.kelompok_15.tb_ptb.models.JadwalSeminardanSidang;
 
 import java.util.ArrayList;
 
-public class ListJadwalSeminarDanSidangActivity extends AppCompatActivity {
+public class ListJadwalSeminarDanSidangActivity extends AppCompatActivity implements AdapterJadwal.ItemJadwalClickListener {
 
     private RecyclerView recyclerjadwal;
 
@@ -23,6 +24,7 @@ public class ListJadwalSeminarDanSidangActivity extends AppCompatActivity {
         recyclerjadwal = findViewById(R.id.recycler_jadwal);
 
         AdapterJadwal adapter = new AdapterJadwal(getJadwal());
+        adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this );
 
         recyclerjadwal.setLayoutManager(layoutManager);
@@ -77,5 +79,10 @@ public class ListJadwalSeminarDanSidangActivity extends AppCompatActivity {
 
         return ListJadwal;
 
+    }
+
+    @Override
+    public void onItemJadwalClick(JadwalSeminardanSidang jadwal) {
+        startActivity(new Intent(getApplicationContext(), DetailListJadwalActivity.class));
     }
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.kelompok_15.tb_ptb.adapters.AdapterLogbook;
@@ -11,7 +12,7 @@ import com.kelompok_15.tb_ptb.models.Logbook;
 
 import java.util.ArrayList;
 
-public class ListLogBookActivity extends AppCompatActivity {
+public class ListLogBookActivity extends AppCompatActivity implements  AdapterLogbook.ItemLogbookClickListener{
 
     private RecyclerView rvLogbook;
 
@@ -23,6 +24,7 @@ public class ListLogBookActivity extends AppCompatActivity {
         rvLogbook = findViewById(R.id.list_logbook);
 
         AdapterLogbook adapter = new AdapterLogbook(getLogbook());
+        adapter.setListenerIL(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvLogbook.setLayoutManager(layoutManager);
@@ -82,5 +84,11 @@ public class ListLogBookActivity extends AppCompatActivity {
 
         ));
         return listLogbook;
+    }
+
+    @Override
+    public void  onItemLogbookClick(Logbook logbook){
+        Intent listLogbookIn = new Intent(this, DetailLogBookActivity.class);
+        startActivity(listLogbookIn);
     }
 }

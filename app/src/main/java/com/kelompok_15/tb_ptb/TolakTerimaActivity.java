@@ -35,6 +35,7 @@ public class TolakTerimaActivity extends AppCompatActivity {
                 Toast.makeText(TolakTerimaActivity.this, "Tolak", Toast.LENGTH_SHORT).show();
                 Intent tolakIn = new Intent(TolakTerimaActivity.this, ListPermintaanBimbinganActivity.class);
                 startActivity(tolakIn);
+
             }
         });
     }

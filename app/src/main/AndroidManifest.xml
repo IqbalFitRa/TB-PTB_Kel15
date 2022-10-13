@@ -21,13 +21,13 @@
             android:exported="false" />
         <activity
             android:name=".ListJadwalSidangActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".InputNilaiSidangActivity"
             android:exported="false" />
         <activity
             android:name=".ListJadwalSeminarActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".TolakTerimaActivity"
             android:exported="true" />

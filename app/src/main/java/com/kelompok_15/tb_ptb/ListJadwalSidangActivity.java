@@ -23,7 +23,6 @@ public class ListJadwalSidangActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent rumusan = new Intent(ListJadwalSidangActivity.this, InputNilaiSidangActivity.class);
                 startActivity(rumusan);
-
             }
         });
     }

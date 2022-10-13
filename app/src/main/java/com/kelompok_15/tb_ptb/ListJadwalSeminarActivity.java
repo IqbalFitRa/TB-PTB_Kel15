@@ -22,6 +22,7 @@ public class ListJadwalSeminarActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent menambahkan = new Intent(ListJadwalSeminarActivity.this, rekomendasiSidangActivity.class);
                 startActivity(menambahkan);
+
             }
         });
     }

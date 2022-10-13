@@ -23,8 +23,6 @@ public class TolakTerimaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(TolakTerimaActivity.this, "Diterima", Toast.LENGTH_SHORT).show();
-                Intent terimaIn = new Intent(TolakTerimaActivity.this,ListPermintaanBimbinganActivity.class );
-                startActivity(terimaIn);
             }
         });
 
@@ -33,9 +31,6 @@ public class TolakTerimaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(TolakTerimaActivity.this, "Tolak", Toast.LENGTH_SHORT).show();
-                Intent tolakIn = new Intent(TolakTerimaActivity.this, ListPermintaanBimbinganActivity.class);
-                startActivity(tolakIn);
-
             }
         });
     }

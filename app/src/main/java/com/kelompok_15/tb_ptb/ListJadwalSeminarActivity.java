@@ -16,7 +16,7 @@ public class ListJadwalSeminarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_jadwal_seminar);
 
-        menambahkan = findViewById(R.id.buttonsidang1);
+        menambahkan = findViewById(R.id.ButtonRekomendasijadwalseminar);
         menambahkan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

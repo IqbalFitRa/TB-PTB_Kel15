@@ -67,6 +67,7 @@ public class ListPermintaanBimbinganActivity extends AppCompatActivity implement
     @Override
     public void onItemPBClick(PermintaanBimbingan permintaanBimbingan) {
         Intent listpb = new Intent(this, TolakTerimaActivity.class);
+        listpb.putExtra("NAMA_MAHASISWA", permintaanBimbingan.getNama());
         startActivity(listpb);
     }
 }

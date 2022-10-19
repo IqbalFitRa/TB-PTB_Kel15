@@ -100,6 +100,8 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
     @Override
     public void onItemMahasiswaClick(Mahasiswa mahasiswa) {
         Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
+        listmahasiswa.putExtra("NAMA_MAHASISWA", mahasiswa.getNama());
+        //listmahasiswa.putExtra("NIM_MAHASISWA", mahasiswa.getNim());
         startActivity(listmahasiswa);
         //Toast.makeText(this, "OK....", Toast.LENGTH_SHORT).show();
     }

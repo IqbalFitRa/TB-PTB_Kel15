@@ -7,6 +7,7 @@ import androidx.core.app.NotificationManagerCompat;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -60,10 +61,13 @@ public class LoginActivity extends AppCompatActivity {
                             Intent login = new Intent(LoginActivity.this, MenuActivity.class);
                             startActivity(login);
 
+                            Intent resultIntent = new Intent(LoginActivity.this, LoginActivity.class);
 
-                    //PendingIntent resultPendingIntent =
-                      //      stackBuilder.getPendingIntent(0,
-                       //             PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+                            TaskStackBuilder stackBuilder = TaskStackBuilder.create(LoginActivity.this);
+                            stackBuilder.addNextIntentWithParentStack(resultIntent);
+                            PendingIntent resultPendingIntent =
+                                    stackBuilder.getPendingIntent(0,
+                                            PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
                             NotificationCompat.Builder builder = new NotificationCompat.Builder(LoginActivity.this, CHANNEL_ID)
                                     .setSmallIcon(R.drawable.logounand)
                                     .setContentTitle("Notifikasi Login")

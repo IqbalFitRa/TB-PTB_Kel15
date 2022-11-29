@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddressLogin"
+        android:id="@+id/emailLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewLogin" />
 
     <EditText
-        android:id="@+id/editTextTextPasswordLogin"
+        android:id="@+id/passwordLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -60,7 +60,7 @@
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddressLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/emailLogin" />
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
@@ -73,6 +73,6 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

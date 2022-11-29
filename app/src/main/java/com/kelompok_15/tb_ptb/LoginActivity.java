@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                             Intent login = new Intent(LoginActivity.this, MenuActivity.class);
                             startActivity(login);
 
-                            Intent resultIntent = new Intent(LoginActivity.this, LoginActivity.class);
+                            Intent resultIntent = new Intent(LoginActivity.this, MenuActivity.class);
 
                             TaskStackBuilder stackBuilder = TaskStackBuilder.create(LoginActivity.this);
                             stackBuilder.addNextIntentWithParentStack(resultIntent);

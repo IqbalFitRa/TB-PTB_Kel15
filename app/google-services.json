@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "251900063711",
+    "project_id": "ptb-b-klmpk-15",
+    "storage_bucket": "ptb-b-klmpk-15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251900063711:android:d8be70423716365f6e1e6a",
+        "android_client_info": {
+          "package_name": "com.kelompok_15.tb_ptb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251900063711-l98d9o3lapqhccfdern4halfp8skaonh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3pGs7BIktWLq84aqqVXs22cAm-oOFxms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251900063711-l98d9o3lapqhccfdern4halfp8skaonh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

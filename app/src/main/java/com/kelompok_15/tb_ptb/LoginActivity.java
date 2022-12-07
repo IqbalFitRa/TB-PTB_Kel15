@@ -52,11 +52,11 @@ public class LoginActivity extends AppCompatActivity {
                 TextView username = (TextView) findViewById(R.id.emailLogin);
                 TextView password = (TextView) findViewById(R.id.passwordLogin);
 
-               /* MainInterface mainInterface = RetrofitClient.getService();
+              /*  MainInterface mainInterface = RetrofitClient.getService();
                 Call<LoginResponse> call = mainInterface.postLogin(username.getText().toString(),password.getText().toString());
                 call.enqueue(new Callback<LoginResponse>() {
                     @Override
-                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) { */
+                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {*/
                         if(username.getText().toString().equals("Dosen") && password.getText().toString().equals("dosen")){
                             Intent login = new Intent(LoginActivity.this, MenuActivity.class);
                             startActivity(login);
@@ -79,15 +79,15 @@ public class LoginActivity extends AppCompatActivity {
                         }else
                             Toast.makeText(LoginActivity.this, "Email/Password Wrong", Toast.LENGTH_SHORT).show();
 
-                    /*}
+                    }
 
-                    @Override
+                   /* @Override
                     public void onFailure(Call<LoginResponse> call, Throwable t) {
                         Toast.makeText(LoginActivity.this, "Gagal", Toast.LENGTH_SHORT).show();
                     }
-                });*/
+                });
 
-            }
+            }*/
         });
     }
 

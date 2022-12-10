@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class InputNilaiSidangActivity extends AppCompatActivity {
 
-    private static final String CHANNEL_ID ="contoh Kanal";
+    private static final String CHANNEL_ID ="ChannelDarib";
     private Button buttonShow;
     private NotificationManagerCompat notificationManager;
 
@@ -48,8 +48,8 @@ public class InputNilaiSidangActivity extends AppCompatActivity {
     private void createNotificationChannel() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "Contoh Notifikasi";
-            String description = "Ini merupakan contoh notifikasi";
+            CharSequence name = "NotifikasiDarib";
+            String description = "Notifikasi Input nilai sidang";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
             channel.setDescription(description);

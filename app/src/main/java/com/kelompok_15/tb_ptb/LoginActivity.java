@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                 });
 
         notifMan = NotificationManagerCompat.from(this);
-        createNotificationChannel();
+       // createNotificationChannel();
 
         Button login =(Button) findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener()
@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                             Intent login = new Intent(LoginActivity.this, MenuActivity.class);
                             startActivity(login);
 
-                            Intent resultIntent = new Intent(LoginActivity.this, LoginActivity.class);
+                           /* Intent resultIntent = new Intent(LoginActivity.this, LoginActivity.class);
 
                             TaskStackBuilder stackBuilder = TaskStackBuilder.create(LoginActivity.this);
                             stackBuilder.addNextIntentWithParentStack(resultIntent);
@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                                     .addAction(R.drawable.logounand,"Lihat",resultPendingIntent)
                                     .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-                            notifMan.notify(101, builder.build());
+                            notifMan.notify(101, builder.build());*/
 
                         }else
                             Toast.makeText(LoginActivity.this, "Email/Password Wrong", Toast.LENGTH_SHORT).show();
@@ -118,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     //channel
-    private void createNotificationChannel() {
+    /*private void createNotificationChannel() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
@@ -126,5 +126,5 @@ public class LoginActivity extends AppCompatActivity {
             channel.setDescription("This is Description for Login Notification");
             notifMan.createNotificationChannel(channel);
         }
-    }
+    }*/
 }

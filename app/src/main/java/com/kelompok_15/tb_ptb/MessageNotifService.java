@@ -45,19 +45,20 @@ public class MessageNotifService extends FirebaseMessagingService {
             NotificationManagerCompat.from(this).createNotificationChannel(channel);
         }
 
-        /*Intent resultIntent = new Intent(this, LoginActivity.class);
+        Intent resultIntent = new Intent(this, ListPermintaanBimbinganActivity.class);
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
         stackBuilder.addNextIntentWithParentStack(resultIntent);
         PendingIntent resultPendingIntent =
                 stackBuilder.getPendingIntent(0,
-                        PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);*/
+                        PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.logounand)
                 .setContentTitle(notification.getTitle())
                 .setContentText(notification.getBody())
-                //.setContentIntent(resultPendingIntent)
-                //.addAction(R.drawable.logounand,"Lihat",resultPendingIntent)
+                .setContentIntent(resultPendingIntent)
+                .addAction(R.drawable.logounand,"Lihat",resultPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         NotificationManagerCompat.from(this).notify(101, builder.build());

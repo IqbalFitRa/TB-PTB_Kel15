@@ -7,8 +7,9 @@ import retrofit2.http.POST;
 
 public interface MainInterface {
 
-    @POST("api/login")
-    Call<LoginResponse> postLogin (
-            @Field("email") String email,
-            @Field("password") String password);
+    @POST("login/")
+    Call<LoginResponse> login (
+            @Field("username")String username,
+            @Field("password")String password
+    );
 }

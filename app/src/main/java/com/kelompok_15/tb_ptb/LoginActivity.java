@@ -16,6 +16,13 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.kelompok_15.tb_ptb.retrofit.LoginResponse;
+import com.kelompok_15.tb_ptb.retrofit.MainInterface;
+import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -49,7 +56,45 @@ public class LoginActivity extends AppCompatActivity {
 
         notifMan = NotificationManagerCompat.from(this);
 
-        cekLogin();
+
+        username = findViewById(R.id.emailLogin);
+        password = findViewById(R.id.passwordLogin);
+        login = findViewById(R.id.login);
+
+        String userName = username.getText().toString();
+        String passWord = password.getText().toString();
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainInterface mainInterface = RetrofitClient.getService();
+
+                Call<LoginResponse> call = mainInterface.login(userName,passWord);
+                call.enqueue(new Callback<LoginResponse>() {
+                    @Override
+                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                        LoginResponse loginResponse = response.body();
+                        if (loginResponse != null)
+                        {
+                            Toast.makeText(LoginActivity.this, "Sukses login", Toast.LENGTH_SHORT).show();
+                            Intent login = new Intent(LoginActivity.this, MenuActivity.class);
+                            startActivity(login);
+                        }
+                        else
+                        {
+                            Toast.makeText(LoginActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<LoginResponse> call, Throwable t) {
+                        Toast.makeText(LoginActivity.this,t.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+
+
 
        /*
         Button login =(Button) findViewById(R.id.login);
@@ -100,22 +145,6 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });*/
-    }
-
-    public void cekLogin(){
-        username = findViewById(R.id.emailLogin);
-        password = findViewById(R.id.passwordLogin);
-        login = findViewById(R.id.login);
-
-        String userName = username.getText().toString();
-        String passWord = password.getText().toString();
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
 
     //channel

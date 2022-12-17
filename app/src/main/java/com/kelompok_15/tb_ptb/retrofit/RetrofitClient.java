@@ -11,7 +11,7 @@ public class RetrofitClient {
     public static MainInterface getService() {
 
         if (service == null) {
-            String API_BASE_URL = "http://ptb-api.husnilkamil.my.id";
+            String API_BASE_URL = "http://ptb-api.husnilkamil.my.id/";
 
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
             Retrofit.Builder builder = new Retrofit.Builder().baseUrl(API_BASE_URL).addConverterFactory(GsonConverterFactory.create());

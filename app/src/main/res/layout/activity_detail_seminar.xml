@@ -249,4 +249,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dosenPengujiTitle" />
 
+    <Button
+        android:id="@+id/pesertaseminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Peserta Seminar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dosenPenguji" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

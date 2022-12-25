@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -32,11 +36,24 @@ public class InputNilaiSidangActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                // Create an Intent for the activity you want to start
+                Intent resultIntent = new Intent(InputNilaiSidangActivity.this, InputNilaiSidangActivity.class);
+                // Create the TaskStackBuilder and add the intent, which inflates the back stack
+                TaskStackBuilder stackBuilder = TaskStackBuilder.create(InputNilaiSidangActivity.this);
+                stackBuilder.addNextIntentWithParentStack(resultIntent);
+                // Get the PendingIntent containing the entire back stack
+                PendingIntent resultPendingIntent =
+                        stackBuilder.getPendingIntent(0,
+                                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(InputNilaiSidangActivity.this, CHANNEL_ID)
-                        .setSmallIcon(R.drawable.ic_launcher_background)
-                        .setContentTitle("TB PTB")
+                        .setSmallIcon(R.drawable.logounand)
+                        .setContentTitle("Dosen TA")
                         .setContentText("Nilai sudah Diinput")
+                        .setContentIntent(resultPendingIntent)
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                Notification notification = builder.build();
 
                 notificationManager.notify(101,builder.build());
             }

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_list_jadwal.xml" value="0.3625" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_log_book.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_mahasiswa.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_seminar.xml" value="0.3625" />
@@ -16,7 +17,7 @@
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_lihat_profile.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_list_jadwal_seminar.xml" value="0.33" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_list_jadwal_seminar_dan_sidang.xml" value="0.33" />
-        <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_list_jadwal_sidang.xml" value="0.75" />
+        <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_list_jadwal_sidang.xml" value="0.5" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_list_log_book.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_list_mahasiswa.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_list_permintaanbimbingan.xml" value="0.2866847826086957" />
@@ -26,9 +27,11 @@
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_menu.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_persetujuan_bimbingan.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_rekomendasi_sidang.xml" value="0.3625" />
+        <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/activity_seminar_mahasiswa.xml" value="0.3614583333333333" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/item_card_logbook.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/item_mahasiswa.xml" value="0.2866847826086957" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/item_permintaanbimbingan.xml" value="0.2866847826086957" />
+        <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/item_seminar_mahasiswa.xml" value="0.25271739130434784" />
         <entry key="..\:/TB-PTB_Kel15/app/src/main/res/layout/list_nilai.xml" value="0.2866847826086957" />
         <entry key="..\:/Users/User/StudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_list_jadwal.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/User/StudioProjects/TB-PTB_Kel15/app/src/main/res/layout/activity_detail_log_book.xml" value="0.15670289855072464" />

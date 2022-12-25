@@ -11,6 +11,5 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.kelompok_15.tb_ptb.R;
 import com.kelompok_15.tb_ptb.models.PermintaanBimbingan;
-
 public class AdapterSeminar {
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationManagerCompat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +21,8 @@ import com.kelompok_15.tb_ptb.retrofit.LoginResponse;
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
 
+import org.json.JSONObject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,6 +34,9 @@ public class LoginActivity extends AppCompatActivity {
     EditText username,password;
     Button login;
     private NotificationManagerCompat notifMan;
+    String userName;
+    String passWord;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,28 +67,45 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.passwordLogin);
         login = findViewById(R.id.login);
 
-        String userName = username.getText().toString();
-        String passWord = password.getText().toString();
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                userName = username.getText().toString();
+                passWord = password.getText().toString();
+
                 MainInterface mainInterface = RetrofitClient.getService();
 
                 Call<LoginResponse> call = mainInterface.login(userName,passWord);
                 call.enqueue(new Callback<LoginResponse>() {
                     @Override
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                        String message = null;
+                        JSONObject jsonObject = null;
                         LoginResponse loginResponse = response.body();
-                        if (loginResponse != null)
+                        if(loginResponse.getStatus() != "")
                         {
-                            Toast.makeText(LoginActivity.this, "Sukses login", Toast.LENGTH_SHORT).show();
+                            String token = loginResponse.getAuthorisation().getToken();
+                            String name = loginResponse.getUser().getName();
+                            String username2 = loginResponse.getUser().getUsername();
+                            String email = loginResponse.getUser().getEmail();
+
+                            Log.i("success", token);
+                            SharedPreferences sharedPreferences = getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("token",token);
+                            editor.putString("name",name);
+                            editor.putString("username",username2);
+                            editor.putString("email",email);
+
+                            Log.d("email",email);
+                            editor.apply();
                             Intent login = new Intent(LoginActivity.this, MenuActivity.class);
                             startActivity(login);
                         }
                         else
                         {
-                            Toast.makeText(LoginActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
+                            message = loginResponse.getStatus();
+                            Toast.makeText(LoginActivity.this, message , Toast.LENGTH_SHORT).show();
                         }
                     }
                     @Override

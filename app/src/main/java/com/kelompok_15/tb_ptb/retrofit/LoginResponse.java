@@ -4,22 +4,24 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginResponse{
 
-	@SerializedName("token")
-	private String token;
+	@SerializedName("authorisation")
+	private Authorisation authorisation;
 
-	public void setToken(String token){
-		this.token = token;
+	@SerializedName("user")
+	private User user;
+
+	@SerializedName("status")
+	private String status;
+
+	public Authorisation getAuthorisation(){
+		return authorisation;
 	}
 
-	public String getToken(){
-		return token;
+	public User getUser(){
+		return user;
 	}
 
-	@Override
- 	public String toString(){
-		return 
-			"LoginResponse{" + 
-			"token = '" + token + '\'' + 
-			"}";
-		}
+	public String getStatus(){
+		return status;
+	}
 }

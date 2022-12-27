@@ -73,8 +73,8 @@ public class LoginActivity extends AppCompatActivity {
                 userName = username.getText().toString();
                 passWord = password.getText().toString();
 
-                MainInterface mainInterface = RetrofitClient.getService();
 
+                MainInterface mainInterface = RetrofitClient.getService();
                 Call<LoginResponse> call = mainInterface.login(userName,passWord);
                 call.enqueue(new Callback<LoginResponse>() {
                     @Override
@@ -115,6 +115,7 @@ public class LoginActivity extends AppCompatActivity {
                 });
             }
         });
+
 
 
 
@@ -180,4 +181,5 @@ public class LoginActivity extends AppCompatActivity {
             notifMan.createNotificationChannel(channel);
         }
     }*/
+
 }

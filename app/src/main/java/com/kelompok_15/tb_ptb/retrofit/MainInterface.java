@@ -19,6 +19,6 @@ public interface MainInterface {
 
     @POST("api/logout")
     Call<LogoutResponse> logout (
-            @Header("token") String token
+            @Header("Authorization") String token
     );
 }

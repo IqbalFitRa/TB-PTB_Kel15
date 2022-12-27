@@ -68,18 +68,19 @@ public class MenuActivity extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
                 gettoken = sharedPreferences.getString("token","");
                 token = "Bearer " + gettoken;
+                Toast.makeText(MenuActivity.this, token, Toast.LENGTH_SHORT).show();
 
-                Call<LogoutResponse> call = mainInterface.logout("token");
+                Call<LogoutResponse> call = mainInterface.logout(token);
                 call.enqueue(new Callback<LogoutResponse>() {
                     @Override
                     public void onResponse(Call<LogoutResponse> call, Response<LogoutResponse> response) {
 
                        LogoutResponse logoutResponse = response.body();
                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                       editor.remove("token");
+                       editor.clear();
                        editor.apply();
                        finish();
-                       Toast.makeText(MenuActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(MenuActivity.this, logoutResponse.getMessage(), Toast.LENGTH_SHORT).show();
                        Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
                        startActivity(intent);
                     }

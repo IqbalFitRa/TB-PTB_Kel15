@@ -7,31 +7,33 @@
     tools:context=".EditProfileActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
-        android:layout_width="413dp"
+        android:id="@+id/toolbarEditProfil"
+        android:layout_width="419dp"
         android:layout_height="56dp"
         android:background="#4B81A5"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="?attr/actionModeCloseDrawable" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/editProfile"
-        android:layout_width="128dp"
-        android:layout_height="29dp"
+        android:layout_width="104dp"
+        android:layout_height="30dp"
         android:text="Edit Profil"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.421" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -208,8 +210,23 @@
         android:text="Simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNoHP"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/LihatProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:hint="Simpan"
+        android:text="Lihat Profil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toEndOf="@+id/simpanEdit"
         app:layout_constraintTop_toBottomOf="@+id/editNoHP"
         app:layout_constraintVertical_bias="0.0" />
 

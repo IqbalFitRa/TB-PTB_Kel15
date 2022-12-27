@@ -14,4 +14,5 @@ public class User {
 
     @ColumnInfo(name = "no_hp")
     public String no_hp;
+
 }

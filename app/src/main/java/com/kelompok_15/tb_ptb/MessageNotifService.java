@@ -58,7 +58,7 @@ public class MessageNotifService extends FirebaseMessagingService {
                 .setContentTitle(notification.getTitle())
                 .setContentText(notification.getBody())
                 .setContentIntent(resultPendingIntent)
-                .addAction(R.drawable.logounand,"Lihat",resultPendingIntent)
+                .addAction(R.drawable.logounand,"       REPLY       MARK AS READ",resultPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         NotificationManagerCompat.from(this).notify(101, builder.build());

@@ -32,7 +32,6 @@ public class MessageNotifService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-       //notifMan = NotificationManagerCompat.from(this);
         displayNotification(remoteMessage.getNotification());
     }
 

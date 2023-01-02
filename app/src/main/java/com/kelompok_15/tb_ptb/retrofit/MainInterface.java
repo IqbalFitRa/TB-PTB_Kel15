@@ -1,5 +1,7 @@
 package com.kelompok_15.tb_ptb.retrofit;
 
+import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -21,6 +23,11 @@ public interface MainInterface {
     @POST("api/logout")
     Call<LogoutResponse> logout (
             @Header("Authorization") String token
+    );
+
+    @GET("api/thesis/advisors")
+    Call<ListMahasiswaResponse> listmahasiswaresponse (
+
     );
 
 }

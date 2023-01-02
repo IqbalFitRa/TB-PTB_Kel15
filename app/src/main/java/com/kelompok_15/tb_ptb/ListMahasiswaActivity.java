@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,8 +13,17 @@ import android.widget.Toast;
 
 import com.kelompok_15.tb_ptb.adapters.AdapterMahasiswa;
 import com.kelompok_15.tb_ptb.models.Mahasiswa;
+import com.kelompok_15.tb_ptb.retrofit.MainInterface;
+import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
+import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
+import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ThesesItem;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ListMahasiswaActivity extends AppCompatActivity implements AdapterMahasiswa.ItemMahasiswaClickListener{
 
@@ -42,7 +52,36 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
 
         rvMahasiswa.setLayoutManager(layoutManager);
         rvMahasiswa.setAdapter(adapter);
+
+        MainInterface mainInterface = RetrofitClient.getService();
+        SharedPreferences sharedPreferences = getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
+        String token = sharedPreferences.getString("token","");
+
+        Call<ListMahasiswaResponse> call = mainInterface.listmahasiswaresponse();
+        call.enqueue(new Callback<ListMahasiswaResponse>() {
+            @Override
+            public void onResponse(Call<ListMahasiswaResponse> call, Response<ListMahasiswaResponse> response) {
+                ListMahasiswaResponse listMahasiswaResponse1 = response.body();
+                if (listMahasiswaResponse1 != null){
+                    List<ThesesItem> theses = listMahasiswaResponse1.getTheses();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ListMahasiswaResponse> call, Throwable t) {
+
+            }
+        });
+
+
     }
+
+
+
+
+
+
 
 
     public ArrayList<Mahasiswa> getMahasiswa(){

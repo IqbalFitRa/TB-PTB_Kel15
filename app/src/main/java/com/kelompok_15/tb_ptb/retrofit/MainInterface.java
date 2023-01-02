@@ -23,4 +23,8 @@ public interface MainInterface {
             @Header("Authorization") String token
     );
 
+    @GET("api/theses/309/logbooks")
+    Call<ListLogbook> listlogbook(@Header("Authorization") String token);
+
+
 }

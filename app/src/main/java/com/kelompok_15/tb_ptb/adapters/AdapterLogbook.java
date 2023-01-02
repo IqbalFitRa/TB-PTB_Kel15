@@ -11,11 +11,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.kelompok_15.tb_ptb.R;
 import com.kelompok_15.tb_ptb.models.Logbook;
 import com.kelompok_15.tb_ptb.models.Mahasiswa;
+import com.kelompok_15.tb_ptb.retrofit.LogbooksItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookViewHolder> {
-    ArrayList<Logbook> listLogbook = new ArrayList<>();
+    private List<LogbooksItem> itemList = new ArrayList<>();
+
+    public void setItemList(List<LogbooksItem> itemList) {
+        this.itemList = itemList;
+        notifyDataSetChanged();
+    }
+
+    /*ArrayList<Logbook> listLogbook = new ArrayList<>();
     AdapterLogbook.ItemLogbookClickListener listenerIL;
 
     public AdapterLogbook(ArrayList<Logbook> listLogbook) {
@@ -31,6 +40,7 @@ public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookV
 
         this.listenerIL = listenerIL;
     }
+    */
 
     @NonNull
     @Override
@@ -38,24 +48,31 @@ public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookV
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_card_logbook, parent, false);
         return new LogbookViewHolder(view);
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull LogbookViewHolder holder, int position) {
-        Logbook logbook = listLogbook.get(position);
+      LogbooksItem logbooks = itemList.get(position);
+        holder.agendaLogbook.setText(logbooks.getProgress());
+        holder.tanggalLogbook.setText(logbooks.getDate());
+       /* Logbook logbook = listLogbook.get(position);
         holder.agendaLogbook.setText(logbook.getAgenda());
         holder.tanggalLogbook.setText(logbook.getTanggal());
-
+       */
     }
 
     @Override
     public int getItemCount() {
-        return listLogbook.size();
+        return itemList.size();
+
     }
 
-    public interface ItemLogbookClickListener {
+
+
+    /*public interface ItemLogbookClickListener {
         void onItemLogbookClick(Logbook logbook);
-    }
+    }*/
 
     public class LogbookViewHolder extends RecyclerView.ViewHolder {
 
@@ -65,17 +82,18 @@ public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookV
 
         public LogbookViewHolder(@NonNull View itemView) {
             super(itemView);
+
             agendaLogbook = itemView.findViewById(R.id.agenda_logbook);
             tanggalLogbook = itemView.findViewById(R.id.tanggal_logbook);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+           /* itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Logbook logbook = listLogbook.get(getBindingAdapterPosition());
                     listenerIL.onItemLogbookClick(logbook);
                 }
             });
-
+            */
         }
     }
 }

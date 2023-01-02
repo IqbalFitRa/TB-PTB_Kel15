@@ -1,5 +1,7 @@
 package com.kelompok_15.tb_ptb.retrofit;
 
+import com.kelompok_15.tb_ptb.DetailMahasiswaActivity;
+import com.kelompok_15.tb_ptb.retrofit.detailmahasiswa.DetailMahasiswaResponse;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
 
 import retrofit2.Call;
@@ -30,4 +32,8 @@ public interface MainInterface {
             @Header("Authorization") String token
     );
 
+    @GET("api/theses/277/trials/")
+    Call<DetailMahasiswaResponse> detailmahasiswaresponse (
+            @Header("Authorization") String token
+    );
 }

@@ -67,6 +67,7 @@
         android:layout_width="407dp"
         android:layout_height="403dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2DetailMahasiswa">
 
@@ -75,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
-            android:text="Tempat / Tanggal Lahir"
+            android:text="Tempat Lahir"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -97,10 +98,10 @@
 
         <TextView
             android:id="@+id/emailDetailMahasiswa"
-            android:layout_width="66dp"
+            android:layout_width="134dp"
             android:layout_height="30dp"
             android:layout_marginTop="88dp"
-            android:text="Email"
+            android:text="Tanggal Lahir"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tempattaggallahirDetailMahasiswa"

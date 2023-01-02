@@ -71,6 +71,7 @@ public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.Mah
         public ImageView imageProfil;
         public TextView nama, nim;
 
+
         public MahasiswaViewHolder(@NonNull View itemView) {
             super(itemView);
 

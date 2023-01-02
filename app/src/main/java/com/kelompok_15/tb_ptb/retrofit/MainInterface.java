@@ -27,7 +27,7 @@ public interface MainInterface {
 
     @GET("api/thesis/advisors")
     Call<ListMahasiswaResponse> listmahasiswaresponse (
-
+            @Header("Authorization") String token
     );
 
 }

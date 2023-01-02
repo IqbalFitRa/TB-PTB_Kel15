@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -25,10 +27,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ListMahasiswaActivity extends AppCompatActivity implements AdapterMahasiswa.ItemMahasiswaClickListener{
+public class ListMahasiswaActivity extends AppCompatActivity {
 
     private RecyclerView rvMahasiswa;
     Button bimbingan;
+    private AdapterMahasiswa adapter;
+    String gettoken, token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,25 +49,28 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
         });
 
         rvMahasiswa = findViewById(R.id.rv_listmahasiswa);
+        rvMahasiswa.setLayoutManager(new LinearLayoutManager(this));
 
-        AdapterMahasiswa adapter = new AdapterMahasiswa(getMahasiswa());
-        adapter.setListenerIM(this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-
-        rvMahasiswa.setLayoutManager(layoutManager);
+        adapter = new AdapterMahasiswa();
         rvMahasiswa.setAdapter(adapter);
+
 
         MainInterface mainInterface = RetrofitClient.getService();
         SharedPreferences sharedPreferences = getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
-        String token = sharedPreferences.getString("token","");
+        gettoken = sharedPreferences.getString("token","");
+        token = "Bearer " + gettoken;
+        Toast.makeText(ListMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
 
-        Call<ListMahasiswaResponse> call = mainInterface.listmahasiswaresponse();
+        Call<ListMahasiswaResponse> call = mainInterface.listmahasiswaresponse(token);
         call.enqueue(new Callback<ListMahasiswaResponse>() {
             @Override
             public void onResponse(Call<ListMahasiswaResponse> call, Response<ListMahasiswaResponse> response) {
+
+                Log.d("ListMahasiswa-Debug", response.toString());
                 ListMahasiswaResponse listMahasiswaResponse1 = response.body();
                 if (listMahasiswaResponse1 != null){
                     List<ThesesItem> theses = listMahasiswaResponse1.getTheses();
+                    adapter.setListMahasiswa((ArrayList<ThesesItem>) theses);
 
                 }
             }
@@ -84,7 +91,7 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
 
 
 
-    public ArrayList<Mahasiswa> getMahasiswa(){
+   /* public ArrayList<Mahasiswa> getMahasiswa(){
 
         ArrayList<Mahasiswa> listMahasiswa = new ArrayList<>();
         listMahasiswa.add(new Mahasiswa(
@@ -143,6 +150,6 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
         //listmahasiswa.putExtra("NIM_MAHASISWA", mahasiswa.getNim());
         startActivity(listmahasiswa);
         //Toast.makeText(this, "OK....", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 }

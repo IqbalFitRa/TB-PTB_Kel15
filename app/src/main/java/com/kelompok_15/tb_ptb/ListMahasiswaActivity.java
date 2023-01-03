@@ -89,10 +89,8 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
     @Override
     public void onItemMahasiswaClick(ThesesItem thesesItem) {
 
-        Log.e("Log", thesesItem.toString());
-
         Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
-        listmahasiswa.putExtra("data", thesesItem);
+        listmahasiswa.putExtra("NAMA_MAHASISWA", thesesItem.getStudent().getName());
         startActivity(listmahasiswa);
     }
 

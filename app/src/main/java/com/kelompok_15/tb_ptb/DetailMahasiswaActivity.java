@@ -47,41 +47,41 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainInterface mainInterface = RetrofitClient.getService();
-                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
-                gettoken = sharedPreferences.getString("token","");
-                token = "Bearer " + gettoken;
-                Toast.makeText(DetailMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
-
-
-                Call<DetailTAResponse> call = mainInterface.detailTaMahasiswaresponse(token);
-                call.enqueue(new Callback<DetailTAResponse>() {
-                    @Override
-                    public void onResponse(Call<DetailTAResponse> call, Response<DetailTAResponse> response) {
-                        Log.e("LogDetailTA", response.toString());
-                        DetailTAResponse detailTAResponse = response.body();
-
-                        TextView judulTAa = findViewById(R.id.judul2DetailTA);
-                        String judulTA = detailTAResponse.getTitle();
-                        judulTAa.setText(judulTA);
-
-                        TextView abstraak = findViewById(R.id.ringkasan2DetailTA);
-                        String abtrak = detailTAResponse.getJsonMemberAbstract();
-                        abstraak.setText(abtrak);
-
-                        TextView pembimbingg = findViewById(R.id.pembimbing11DetailTA);
-                        List<SupervisorsItem> pembimbing = detailTAResponse.getSupervisors();
-                        pembimbingg.setText((CharSequence) pembimbing);
-
-
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<DetailTAResponse> call, Throwable t) {
-                        Log.e("LogDetailTA", t.getLocalizedMessage());
-                    }
-                });
+//                MainInterface mainInterface = RetrofitClient.getService();
+//                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
+//                gettoken = sharedPreferences.getString("token","");
+//                token = "Bearer " + gettoken;
+//                Toast.makeText(DetailMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
+//
+//
+//                Call<DetailTAResponse> call = mainInterface.detailTaMahasiswaresponse(token);
+//                call.enqueue(new Callback<DetailTAResponse>() {
+//                    @Override
+//                    public void onResponse(Call<DetailTAResponse> call, Response<DetailTAResponse> response) {
+//                        Log.e("LogDetailTA", response.toString());
+//                        DetailTAResponse detailTAResponse = response.body();
+//
+//                        TextView judulTAa = findViewById(R.id.judul2DetailTA);
+//                        String judulTA = detailTAResponse.getTitle();
+//                        judulTAa.setText(judulTA);
+//
+//                        TextView abstraak = findViewById(R.id.ringkasan2DetailTA);
+//                        String abtrak = detailTAResponse.getJsonMemberAbstract();
+//                        abstraak.setText(abtrak);
+//
+//                        TextView pembimbingg = findViewById(R.id.pembimbing11DetailTA);
+//                        List<SupervisorsItem> pembimbing = detailTAResponse.getSupervisors();
+//                        pembimbingg.setText((CharSequence) pembimbing);
+//
+//
+//
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<DetailTAResponse> call, Throwable t) {
+//                        Log.e("LogDetailTA", t.getLocalizedMessage());
+//                    }
+//                });
 
                 Intent intent = new Intent(DetailMahasiswaActivity.this, DetailTaMahasiswa.class);
                 startActivity(intent);
@@ -90,7 +90,8 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 
         //jan dihapus
         Intent detailIntent = getIntent();
-        if (detailIntent.getExtras() != null){
+        if (detailIntent != null){
+
 //            thesesItem = (ThesesItem) detailIntent.getSerializableExtra("data");
 
 //            student = (Student) detailIntent.getSerializableExtra("data");

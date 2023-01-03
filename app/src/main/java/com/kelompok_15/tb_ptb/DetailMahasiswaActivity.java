@@ -31,6 +31,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
     String gettoken,token;
     public ImageView imageProfil2;
     public TextView nama2, nim2, tempatlhr, tanggallhr, nohp;
+    Student student;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,27 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         tanggallhr = findViewById(R.id.emailDetailMahasiswa);
         nohp = findViewById(R.id.noHPDetailMahasiswa);
 
+        Intent intent = getIntent();
+        if (intent.getExtras() != null){
 
+            student = (Student) intent.getSerializableExtra("data");
+
+            String nama = student.getName();
+            String nim = student.getNim();
+            String tmptlhr = student.getBirthplace();
+            String tnggllhr = student.getBirthday();
+            String nohp1 = student.getPhone();
+
+
+            nama2.setText(nama);
+            nim2.setText(nim);
+            tempatlhr.setText(tmptlhr);
+            tanggallhr.setText(tnggllhr);
+            nohp.setText(nohp1);
+        }
+
+
+        /*
         button = findViewById(R.id.DetailTADetailMahasiswa);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +98,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
                 Intent detailTAin = new Intent(DetailMahasiswaActivity.this, DetailTaMahasiswa.class);
                 startActivity(detailTAin);
             }
-        });
+        });*/
 
         /*Intent listmahasiswa = getIntent();
         if (listmahasiswa != null){

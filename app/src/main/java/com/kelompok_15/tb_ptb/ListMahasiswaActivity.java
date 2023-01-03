@@ -27,7 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ListMahasiswaActivity extends AppCompatActivity {
+public class ListMahasiswaActivity extends AppCompatActivity implements AdapterMahasiswa.ItemMahasiswaClickListener{
 
     private RecyclerView rvMahasiswa;
     Button bimbingan;
@@ -51,7 +51,7 @@ public class ListMahasiswaActivity extends AppCompatActivity {
         rvMahasiswa = findViewById(R.id.rv_listmahasiswa);
         rvMahasiswa.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new AdapterMahasiswa();
+        adapter = new AdapterMahasiswa(this::onItemMahasiswaClick);
         rvMahasiswa.setAdapter(adapter);
 
 
@@ -84,72 +84,11 @@ public class ListMahasiswaActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
-
-
-
-   /* public ArrayList<Mahasiswa> getMahasiswa(){
-
-        ArrayList<Mahasiswa> listMahasiswa = new ArrayList<>();
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "AntooKeren",
-                "2011529033"
-        ));
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "KambingFristail",
-                "2011528891"
-        ));
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "MaimunahNyeker",
-                "2011528894"
-        ));
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "TempelengHepi",
-                "2011527811"
-        ));
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "PalaOerang",
-                "2011528145"
-        ));
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "MantapNgkError",
-                "2011524114"
-        ));
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "Errordikit",
-                "2011524133"
-        ));
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "Pogramrunning",
-                "2011524521"
-        ));
-        listMahasiswa.add(new Mahasiswa(
-                null,
-                "Brodokalah",
-                "2011525321"
-        ));
-
-        return listMahasiswa;
-    }
-
     @Override
-    public void onItemMahasiswaClick(Mahasiswa mahasiswa) {
-        Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
-        listmahasiswa.putExtra("NAMA_MAHASISWA", mahasiswa.getNama());
-        //listmahasiswa.putExtra("NIM_MAHASISWA", mahasiswa.getNim());
-        startActivity(listmahasiswa);
-        //Toast.makeText(this, "OK....", Toast.LENGTH_SHORT).show();
-    }*/
+    public void onItemMahasiswaClick(ThesesItem mahasiswa) {
+
+        startActivity(new Intent(this, DetailMahasiswaActivity.class).putExtra("data",mahasiswa));
+
+    }
 
 }

@@ -18,26 +18,17 @@ import java.util.ArrayList;
 public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.MahasiswaViewHolder>{
 
     private ArrayList<ThesesItem> listMahasiswa = new ArrayList<>();
-    ItemMahasiswaClickListener listenerIM;
+    private ItemMahasiswaClickListener listenerIM;
 
     public void setListMahasiswa(ArrayList<ThesesItem> listMahasiswa) {
         this.listMahasiswa = listMahasiswa;
         notifyDataSetChanged();
     }
-/* public AdapterMahasiswa(ArrayList<Mahasiswa> listMahasiswa) {
-        this.listMahasiswa = listMahasiswa;
-    }
 
-    public AdapterMahasiswa(ArrayList<Mahasiswa> listMahasiswa, ItemMahasiswaClickListener listenerIM) {
-        this.listMahasiswa = listMahasiswa;
+    public AdapterMahasiswa(ItemMahasiswaClickListener listenerIM) {
         this.listenerIM = listenerIM;
-    }*/
-
-    public AdapterMahasiswa() {
 
     }
-
-
 
     @NonNull
     @Override
@@ -54,6 +45,12 @@ public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.Mah
         holder.nama.setText(mahasiswa.getStudent().getName());
         holder.nim.setText(mahasiswa.getStudent().getNim());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listenerIM.onItemMahasiswaClick(mahasiswa);
+            }
+        });
 
     }
 
@@ -88,11 +85,5 @@ public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.Mah
                 }
             });
         }
-      //  @Override
-       // public void onClick(View view) {
-
-           // Mahasiswa mahasiswa = listMahasiswa.get(getAdapterPosition());
-          //  listenerIM.onItemMahasiswaClick(mahasiswa);
-        //}
     }
 }

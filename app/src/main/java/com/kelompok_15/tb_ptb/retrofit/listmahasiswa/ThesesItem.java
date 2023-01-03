@@ -2,7 +2,9 @@ package com.kelompok_15.tb_ptb.retrofit.listmahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ThesesItem{
+import java.io.Serializable;
+
+public class ThesesItem implements Serializable {
 
     @SerializedName("student")
     private Student student;
@@ -93,5 +95,24 @@ public class ThesesItem{
 
     public int getStatus(){
         return status;
+    }
+
+    @Override
+    public String toString() {
+        return "ThesesItem{" +
+                "student=" + student +
+                ", studentId=" + studentId +
+                ", gradeBy=" + gradeBy +
+                ", createdAt='" + createdAt + '\'' +
+                ", jsonMemberAbstract=" + jsonMemberAbstract +
+                ", title=" + title +
+                ", startAt='" + startAt + '\'' +
+                ", createdBy=" + createdBy +
+                ", updatedAt='" + updatedAt + '\'' +
+                ", grade=" + grade +
+                ", id=" + id +
+                ", topicId=" + topicId +
+                ", status=" + status +
+                '}';
     }
 }

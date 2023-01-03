@@ -89,7 +89,7 @@ public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.Mah
 
         @Override
         public void onClick(View view) {
-            ThesesItem thesesItem = listMahasiswa.get(getAdapterPosition());
+            ThesesItem thesesItem = listMahasiswa.get(getBindingAdapterPosition());
             listenerIM.onItemMahasiswaClick(thesesItem);
 
         }

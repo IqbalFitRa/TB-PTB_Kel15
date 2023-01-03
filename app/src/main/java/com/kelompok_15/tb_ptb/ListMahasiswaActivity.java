@@ -86,6 +86,16 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
 
     }
 
+    @Override
+    public void onItemMahasiswaClick(ThesesItem thesesItem) {
+
+        Log.e("Log", thesesItem.toString());
+
+        Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
+        listmahasiswa.putExtra("data", thesesItem);
+        startActivity(listmahasiswa);
+    }
+
 
    /* public ArrayList<Mahasiswa> getMahasiswa(){
 
@@ -139,18 +149,18 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
         return listMahasiswa;
     }*/
 
-    @Override
-    public void onItemMahasiswaClick(ThesesItem mahasiswa) {
-
-//        startActivity(new Intent(this, DetailMahasiswaActivity.class).putExtra("data",mahasiswa));
-
-        //jan dihapus
-        Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
-        listmahasiswa.putExtra("NAMA_MAHASISWA", mahasiswa.getStudent().getName());
-        startActivity(listmahasiswa);
-        //
-
-    }
+//    @Override
+//    public void onItemMahasiswaClick(ThesesItem thesesItem) {
+//
+////        startActivity(new Intent(this, DetailMahasiswaActivity.class).putExtra("data",mahasiswa));
+//
+//        //jan dihapus
+//        Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
+//        listmahasiswa.putExtra("data", thesesItem);
+//        startActivity(listmahasiswa);
+//        //
+//
+//    }
 
 
 }

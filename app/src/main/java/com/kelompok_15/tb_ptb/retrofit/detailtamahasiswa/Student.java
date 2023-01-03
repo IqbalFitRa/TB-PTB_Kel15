@@ -1,10 +1,8 @@
-package com.kelompok_15.tb_ptb.retrofit.listmahasiswa;
+package com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
-
-public class Student implements Serializable {
+public class Student{
 
     @SerializedName("birthday")
     private String birthday;
@@ -123,28 +121,5 @@ public class Student implements Serializable {
 
     public int getStatus(){
         return status;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "birthday='" + birthday + '\'' +
-                ", address=" + address +
-                ", gender=" + gender +
-                ", year=" + year +
-                ", departmentId=" + departmentId +
-                ", photo=" + photo +
-                ", createdAt=" + createdAt +
-                ", religion=" + religion +
-                ", nik='" + nik + '\'' +
-                ", maritalStatus=" + maritalStatus +
-                ", nim='" + nim + '\'' +
-                ", birthplace='" + birthplace + '\'' +
-                ", updatedAt=" + updatedAt +
-                ", phone='" + phone + '\'' +
-                ", name='" + name + '\'' +
-                ", id=" + id +
-                ", status=" + status +
-                '}';
     }
 }

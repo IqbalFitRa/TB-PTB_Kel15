@@ -1,10 +1,8 @@
-package com.kelompok_15.tb_ptb.retrofit.listmahasiswa;
+package com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
-
-public class Student implements Serializable {
+public class SupervisorsItem{
 
     @SerializedName("birthday")
     private String birthday;
@@ -15,41 +13,53 @@ public class Student implements Serializable {
     @SerializedName("gender")
     private int gender;
 
-    @SerializedName("year")
-    private int year;
-
     @SerializedName("department_id")
     private int departmentId;
+
+    @SerializedName("npwp")
+    private Object npwp;
 
     @SerializedName("photo")
     private Object photo;
 
     @SerializedName("created_at")
-    private Object createdAt;
+    private String createdAt;
+
+    @SerializedName("association_type")
+    private Object associationType;
 
     @SerializedName("religion")
-    private Object religion;
+    private int religion;
 
     @SerializedName("nik")
     private String nik;
 
     @SerializedName("marital_status")
-    private Object maritalStatus;
+    private int maritalStatus;
 
-    @SerializedName("nim")
-    private String nim;
+    @SerializedName("nip")
+    private String nip;
+
+    @SerializedName("karpeg")
+    private Object karpeg;
 
     @SerializedName("birthplace")
     private String birthplace;
 
     @SerializedName("updated_at")
-    private Object updatedAt;
+    private String updatedAt;
 
     @SerializedName("phone")
     private String phone;
 
+    @SerializedName("nidn")
+    private String nidn;
+
     @SerializedName("name")
     private String name;
+
+    @SerializedName("pivot")
+    private Pivot pivot;
 
     @SerializedName("id")
     private int id;
@@ -69,23 +79,27 @@ public class Student implements Serializable {
         return gender;
     }
 
-    public int getYear(){
-        return year;
-    }
-
     public int getDepartmentId(){
         return departmentId;
+    }
+
+    public Object getNpwp(){
+        return npwp;
     }
 
     public Object getPhoto(){
         return photo;
     }
 
-    public Object getCreatedAt(){
+    public String getCreatedAt(){
         return createdAt;
     }
 
-    public Object getReligion(){
+    public Object getAssociationType(){
+        return associationType;
+    }
+
+    public int getReligion(){
         return religion;
     }
 
@@ -93,19 +107,23 @@ public class Student implements Serializable {
         return nik;
     }
 
-    public Object getMaritalStatus(){
+    public int getMaritalStatus(){
         return maritalStatus;
     }
 
-    public String getNim(){
-        return nim;
+    public String getNip(){
+        return nip;
+    }
+
+    public Object getKarpeg(){
+        return karpeg;
     }
 
     public String getBirthplace(){
         return birthplace;
     }
 
-    public Object getUpdatedAt(){
+    public String getUpdatedAt(){
         return updatedAt;
     }
 
@@ -113,8 +131,16 @@ public class Student implements Serializable {
         return phone;
     }
 
+    public String getNidn(){
+        return nidn;
+    }
+
     public String getName(){
         return name;
+    }
+
+    public Pivot getPivot(){
+        return pivot;
     }
 
     public int getId(){
@@ -123,28 +149,5 @@ public class Student implements Serializable {
 
     public int getStatus(){
         return status;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "birthday='" + birthday + '\'' +
-                ", address=" + address +
-                ", gender=" + gender +
-                ", year=" + year +
-                ", departmentId=" + departmentId +
-                ", photo=" + photo +
-                ", createdAt=" + createdAt +
-                ", religion=" + religion +
-                ", nik='" + nik + '\'' +
-                ", maritalStatus=" + maritalStatus +
-                ", nim='" + nim + '\'' +
-                ", birthplace='" + birthplace + '\'' +
-                ", updatedAt=" + updatedAt +
-                ", phone='" + phone + '\'' +
-                ", name='" + name + '\'' +
-                ", id=" + id +
-                ", status=" + status +
-                '}';
     }
 }

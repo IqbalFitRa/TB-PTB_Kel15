@@ -64,7 +64,6 @@
             android:id="@+id/profilMenu"
             android:layout_width="300dp"
             android:layout_height="75dp"
-            android:layout_marginTop="40dp"
 
             android:text="Profil"
             app:layout_constraintEnd_toEndOf="parent"
@@ -88,21 +87,33 @@
             android:layout_width="300dp"
             android:layout_height="75dp"
 
-            android:text="List Seminar dan sidang"
+            android:text="List Mahasiswa Seminar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/listMahasiswaMenu" />
 
         <Button
+            android:id="@+id/jadwalSidangMenu"
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+
+            android:text="List Mahasiswa Sidang"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jadwalSeminarMenu" />
+
+        <Button
             android:id="@+id/logoutakun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="Logout"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/jadwalSeminarMenu" />
+            app:layout_constraintTop_toBottomOf="@+id/jadwalSidangMenu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

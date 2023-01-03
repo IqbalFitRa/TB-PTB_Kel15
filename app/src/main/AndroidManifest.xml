@@ -26,9 +26,6 @@
         </service>
 
         <activity
-            android:name=".DetailListJadwalActivity"
-            android:exported="true" />
-        <activity
             android:name=".rekomendasiSidangActivity"
             android:exported="true" />
         <activity
@@ -78,9 +75,12 @@
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
-            android:name=".ListJadwalSeminarDanSidangActivity"
+            android:name=".ListJadwalMahasiswaSeminarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ListJadwalMahasiswaSidangActivity"
             android:exported="true" />
         <activity
             android:name=".EditPasswordActivity"

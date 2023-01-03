@@ -10,25 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kelompok_15.tb_ptb.R;
-import com.kelompok_15.tb_ptb.models.JadwalMahasiswaSidang;
+import com.kelompok_15.tb_ptb.models.JadwalMahasiswaSeminar;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class AdapterJadwal extends RecyclerView.Adapter<AdapterJadwal.JadwalViewHolder>{
-      /*private List<JadwalMahasiswaSidang> itemList = new ArrayList<>();
-      private ClickedItem;*/
+public class AdapterJadwal2 extends RecyclerView.Adapter<AdapterJadwal2.JadwalViewHolder>{
 
-    ArrayList<JadwalMahasiswaSidang> ListJadwal = new ArrayList<>();
-    ItemJadwalClickListener listener;
+    ArrayList<JadwalMahasiswaSeminar> ListJadwal2 = new ArrayList<>();
+    ItemJadwalClickListener listener2;
 
-    public AdapterJadwal(ArrayList<JadwalMahasiswaSidang> listJadwal) {
-        ListJadwal = listJadwal;
+    public AdapterJadwal2(ArrayList<JadwalMahasiswaSeminar> listJadwal2) {
+        ListJadwal2 = listJadwal2;
     }
 
-
-    public void setListener(ItemJadwalClickListener listener) {
-        this.listener = listener;
+    public void setListener(ItemJadwalClickListener listener2) {
+        this.listener2 = listener2;
     }
 
     @NonNull
@@ -41,20 +37,20 @@ public class AdapterJadwal extends RecyclerView.Adapter<AdapterJadwal.JadwalView
 
     @Override
     public void onBindViewHolder(@NonNull JadwalViewHolder holder, int position) {
-        JadwalMahasiswaSidang jadwal = ListJadwal.get(position);
+        JadwalMahasiswaSeminar jadwal2 = ListJadwal2.get(position);
         holder.imageMahasiswa.setImageResource(R.drawable.profil);
-        holder.namaMahasiswa.setText(jadwal.getNama_mahasiswa());
-        holder.nimMahasiswa.setText(jadwal.getNim());
-        holder.tglSidang.setText(jadwal.getTanggal());
+        holder.namaMahasiswa.setText(jadwal2.getNama_mahasiswa());
+        holder.nimMahasiswa.setText(jadwal2.getNim());
+        holder.tglSidang.setText(jadwal2.getTanggal());
     }
 
     @Override
     public int getItemCount() {
-        return ListJadwal.size();
+        return ListJadwal2.size();
     }
 
     public interface ItemJadwalClickListener{
-        void onItemJadwalClick(JadwalMahasiswaSidang jadwal);
+        void onItemJadwalClick(JadwalMahasiswaSeminar jadwal2);
     }
 
     public class JadwalViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -74,8 +70,8 @@ public class AdapterJadwal extends RecyclerView.Adapter<AdapterJadwal.JadwalView
 
         @Override
         public void onClick(View view) {
-            JadwalMahasiswaSidang jadwal = ListJadwal.get(getAdapterPosition());
-            listener.onItemJadwalClick(jadwal);
+            JadwalMahasiswaSeminar jadwal2 = ListJadwal2.get(getAdapterPosition());
+            listener2.onItemJadwalClick(jadwal2);
         }
     }
 }

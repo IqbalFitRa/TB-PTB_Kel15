@@ -19,7 +19,7 @@ import retrofit2.Response;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button buton, profil, jadwal, logout;
+    Button buton, profil, jadwal, jadwal2, logout;
     String gettoken, token;
 
 
@@ -32,8 +32,17 @@ public class MenuActivity extends AppCompatActivity {
         jadwal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jadwalIn = new Intent(MenuActivity.this, ListJadwalSeminarDanSidangActivity.class);
+                Intent jadwalIn = new Intent(MenuActivity.this, ListJadwalMahasiswaSeminarActivity.class);
                 startActivity(jadwalIn);
+            }
+        });
+
+        jadwal2 = findViewById(R.id.jadwalSidangMenu);
+        jadwal2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent jadwal2In = new Intent(MenuActivity.this, ListJadwalMahasiswaSidangActivity.class);
+                startActivity(jadwal2In);
             }
         });
 
@@ -50,9 +59,7 @@ public class MenuActivity extends AppCompatActivity {
 
         buton = findViewById(R.id.listMahasiswaMenu);
         buton.setOnClickListener(new View.OnClickListener()
-
         {
-
             @Override
             public void onClick(View view) {
                 Intent listMahasiswa = new Intent(MenuActivity.this, ListMahasiswaActivity.class);

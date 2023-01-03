@@ -1,15 +1,13 @@
 package com.kelompok_15.tb_ptb.models;
 
-public class JadwalSeminardanSidang {
+public class JadwalMahasiswaSidang {
 
     String gambar;
     String nama_mahasiswa;
     String nim;
     String tanggal;
 
-    public JadwalSeminardanSidang(){}
-
-    public JadwalSeminardanSidang(String gambar, String nama_mahasiswa, String nim, String tanggal) {
+    public JadwalMahasiswaSidang(String gambar, String nama_mahasiswa, String nim, String tanggal) {
         this.gambar = gambar;
         this.nama_mahasiswa = nama_mahasiswa;
         this.nim = nim;

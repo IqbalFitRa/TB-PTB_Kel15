@@ -2,7 +2,9 @@ package com.kelompok_15.tb_ptb.retrofit;
 
 import com.google.gson.annotations.SerializedName;
 
-public class LogbooksItem{
+import java.io.Serializable;
+
+public class LogbooksItem implements Serializable {
 
     @SerializedName("date")
     private String date;

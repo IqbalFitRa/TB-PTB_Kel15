@@ -8,8 +8,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewMhsLogbook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="381dp"
+        android:layout_height="115dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="130dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="37dp"
             android:text="1811522002"
             android:textSize="16sp" />
 
@@ -52,99 +52,121 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="130dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="58dp"
             android:layout_marginBottom="16dp"
             android:text="Sistem Informasi"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/angkatanMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="16dp"
+            android:text="Angkatan" />
+
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/pembimbing2DetailLogbook"
+        android:id="@+id/pembimbingDetailLogbook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Ricky Akbar, M.Kom."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pembimbing2TitleDetailLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/pembimbingTitleDetailLogbook" />
 
     <TextView
-        android:id="@+id/pembimbing2TitleDetailLogbook"
+        android:id="@+id/pembimbingTitleDetailLogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:text="Pembimbing 2"
+        android:layout_marginTop="10dp"
+        android:text="Dosen Pembimbing"
         android:textColor="#4B81A5"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pembimbing1DetailLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/abstrakDetailLogbook" />
 
     <TextView
-        android:id="@+id/uraianKegiatanTitleDetailLogbook"
+        android:id="@+id/progressTitleDetailLogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:text="Uraian Kegiatan"
+        android:layout_marginTop="10dp"
+        android:text="Progress"
         android:textColor="#4B81A5"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tanggalDetailLogbook" />
 
     <TextView
+        android:id="@+id/problemTitleDetailLogbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Problem"
+        android:textColor="#4B81A5"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressDetailLogbook" />
+
+    <TextView
         android:id="@+id/statusTitleDetailLogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:text="Status"
         android:textColor="#4B81A5"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uraianDetailLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/problemDetailLogbook" />
 
     <TextView
         android:id="@+id/tanggalTitleDetailLogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:text="Tanggal"
         android:textColor="#4B81A5"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pembimbing2DetailLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/pembimbingDetailLogbook" />
 
     <TextView
-        android:id="@+id/pembimbing1DetailLogbook"
+        android:id="@+id/abstrakDetailLogbook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
-        android:text="Husnil Kamil, M.T"
+        android:text="heheheh"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pembimbing1TitleDetailLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/abstrakTitleDetailLogbook" />
 
     <TextView
-        android:id="@+id/judulTAPanjangDetailLogbook"
+        android:id="@+id/judulTADetailLogbook"
         android:layout_width="381dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Sistem Informasi Penunjang Keputusan Laptop Terbaik untuk Mahasiswa Jurusan SI"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulTADetailLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/judulTATitleDetailLogbook" />
 
     <TextView
-        android:id="@+id/uraianDetailLogbook"
+        android:id="@+id/progressDetailLogbook"
         android:layout_width="match_parent"
         android:layout_height="21dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Konsultasi Alternatif Judul Tugas Akhir"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uraianKegiatanTitleDetailLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/progressTitleDetailLogbook" />
 
     <TextView
         android:id="@+id/statusDetailLogbook"
@@ -152,10 +174,21 @@
         android:layout_height="21dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
-        android:text="Disetujui"
-        android:textColor="#4CAF50"
+        android:lineSpacingExtra="8sp"
+        android:text="apaya"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusTitleDetailLogbook" />
+
+    <TextView
+        android:id="@+id/problemDetailLogbook"
+        android:layout_width="247dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="8sp"
+        android:text="apaya"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/problemTitleDetailLogbook" />
 
     <TextView
         android:id="@+id/tanggalDetailLogbook"
@@ -168,19 +201,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tanggalTitleDetailLogbook" />
 
     <TextView
-        android:id="@+id/pembimbing1TitleDetailLogbook"
+        android:id="@+id/abstrakTitleDetailLogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:text="Pembimbing 1"
+        android:layout_marginTop="10dp"
+        android:text="Abstrak"
         android:textColor="#4B81A5"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulTAPanjangDetailLogbook" />
+        app:layout_constraintTop_toBottomOf="@+id/judulTADetailLogbook" />
 
     <TextView
-        android:id="@+id/judulTADetailLogbook"
+        android:id="@+id/judulTATitleDetailLogbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -229,14 +262,4 @@
         app:layout_constraintStart_toStartOf="@+id/toolbar_detail_logbook"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_edit_persetujuan"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Edit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusDetailLogbook"
-        tools:ignore="TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

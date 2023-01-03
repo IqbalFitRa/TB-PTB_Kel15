@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.kelompok_15.tb_ptb.R;
 import com.kelompok_15.tb_ptb.models.Logbook;
 import com.kelompok_15.tb_ptb.models.Mahasiswa;
+import com.kelompok_15.tb_ptb.retrofit.ListLogbook;
 import com.kelompok_15.tb_ptb.retrofit.LogbooksItem;
 
 import java.util.ArrayList;
@@ -18,6 +19,15 @@ import java.util.List;
 
 public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookViewHolder> {
     private List<LogbooksItem> itemList = new ArrayList<>();
+    private ClickedItem clickedItem;
+
+    public AdapterLogbook(ClickedItem clickedItem){
+        this.clickedItem = clickedItem;
+    }
+
+    public AdapterLogbook() {
+
+    }
 
     public void setItemList(List<LogbooksItem> itemList) {
         this.itemList = itemList;
@@ -56,10 +66,22 @@ public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookV
       LogbooksItem logbooks = itemList.get(position);
         holder.agendaLogbook.setText(logbooks.getProgress());
         holder.tanggalLogbook.setText(logbooks.getDate());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                clickedItem.ClickedLogbook(logbooks);
+            }
+        });
        /* Logbook logbook = listLogbook.get(position);
         holder.agendaLogbook.setText(logbook.getAgenda());
         holder.tanggalLogbook.setText(logbook.getTanggal());
        */
+    }
+
+    public interface ClickedItem{
+       public void ClickedLogbook(LogbooksItem logbooks);
     }
 
     @Override

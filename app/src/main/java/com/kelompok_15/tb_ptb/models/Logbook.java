@@ -1,6 +1,8 @@
 package com.kelompok_15.tb_ptb.models;
 
-public class Logbook {
+import java.io.Serializable;
+
+public class Logbook implements Serializable {
     String agenda;
     String tanggal;
 

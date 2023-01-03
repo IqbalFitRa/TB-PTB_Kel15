@@ -17,6 +17,7 @@ import com.kelompok_15.tb_ptb.retrofit.LoginResponse;
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ListLogBookActivity extends AppCompatActivity /*implements AdapterLogbook.ItemLogbookClickListener*/{
+public class ListLogBookActivity extends AppCompatActivity implements AdapterLogbook.ClickedItem{
 
     private RecyclerView rvLogbook;
     private AdapterLogbook adapter;
@@ -40,7 +41,7 @@ public class ListLogBookActivity extends AppCompatActivity /*implements AdapterL
         rvLogbook = findViewById(R.id.list_logbook);
         rvLogbook.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new AdapterLogbook();
+        adapter = new AdapterLogbook(this::ClickedLogbook);
         rvLogbook.setAdapter(adapter);
 
 
@@ -58,13 +59,14 @@ public class ListLogBookActivity extends AppCompatActivity /*implements AdapterL
                 if(listLogbook != null){
                     List<LogbooksItem> logbooks = listLogbook.getLogbooks();
                     adapter.setItemList(logbooks);
-
+                    //tambahan
+                    rvLogbook.setAdapter(adapter);
                 }
             }
 
             @Override
             public void onFailure(Call<ListLogbook> call, Throwable t) {
-
+                Log.e("failure", t.getLocalizedMessage());
             }
         });
 
@@ -77,6 +79,11 @@ public class ListLogBookActivity extends AppCompatActivity /*implements AdapterL
 
         rvLogbook.setLayoutManager(layoutManager);
         rvLogbook.setAdapter(adapter);*/
+    }
+
+    @Override
+    public void ClickedLogbook(LogbooksItem logbooks) {
+        startActivity(new Intent (this,DetailLogBookActivity.class).putExtra("data", (Serializable) logbooks));
     }
 
     /*public ArrayList<Logbook> getLogbook(){

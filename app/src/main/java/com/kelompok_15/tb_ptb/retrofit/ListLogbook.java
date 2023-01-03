@@ -1,9 +1,10 @@
 package com.kelompok_15.tb_ptb.retrofit;
 
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class ListLogbook{
+public class ListLogbook implements Serializable {
 
     @SerializedName("count")
     private int count;

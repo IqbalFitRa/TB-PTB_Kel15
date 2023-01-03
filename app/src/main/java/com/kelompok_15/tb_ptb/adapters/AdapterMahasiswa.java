@@ -54,6 +54,7 @@ public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.Mah
         holder.nama.setText(mahasiswa.getStudent().getName());
         holder.nim.setText(mahasiswa.getStudent().getNim());
 
+
     }
 
     @Override

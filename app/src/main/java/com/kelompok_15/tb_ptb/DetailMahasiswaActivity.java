@@ -15,6 +15,9 @@ import android.widget.Toast;
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
 import com.kelompok_15.tb_ptb.retrofit.detailmahasiswa.DetailMahasiswaResponse;
+import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
+import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.Student;
+import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ThesesItem;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -53,21 +56,19 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
                 token = "Bearer " + gettoken;
                 Toast.makeText(DetailMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
 
-                Call<DetailMahasiswaResponse> call = mainInterface.detailmahasiswaresponse(token);
-                call.enqueue(new Callback<DetailMahasiswaResponse>() {
+                Call<ListMahasiswaResponse> call = mainInterface.listmahasiswaresponse(token);
+                call.enqueue(new Callback<ListMahasiswaResponse>() {
                     @Override
-                    public void onResponse(Call<DetailMahasiswaResponse> call, Response<DetailMahasiswaResponse> response) {
-                        Log.d("MahasiswaDetail-Debug", response.toString());
-                        DetailMahasiswaResponse detailMahasiswaResponse1 = response.body();
+                    public void onResponse(Call<ListMahasiswaResponse> call, Response<ListMahasiswaResponse> response) {
 
-                        if (detailMahasiswaResponse1 != null) {
+                        Log.d("DetailMahasiswa-Debug", response.toString());
+                        ListMahasiswaResponse listMahasiswaResponse = response.body();
 
-                        }
 
                     }
 
                     @Override
-                    public void onFailure(Call<DetailMahasiswaResponse> call, Throwable t) {
+                    public void onFailure(Call<ListMahasiswaResponse> call, Throwable t) {
 
                     }
                 });

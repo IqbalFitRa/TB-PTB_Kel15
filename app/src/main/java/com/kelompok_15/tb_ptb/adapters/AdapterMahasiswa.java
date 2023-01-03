@@ -1,5 +1,6 @@
 package com.kelompok_15.tb_ptb.adapters;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +19,19 @@ import java.util.ArrayList;
 public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.MahasiswaViewHolder>{
 
     private ArrayList<ThesesItem> listMahasiswa = new ArrayList<>();
-    private ItemMahasiswaClickListener listenerIM;
+
+    public void setListenerIM(ItemMahasiswaClickListener listenerIM) {
+        this.listenerIM = listenerIM;
+    }
+
+    ItemMahasiswaClickListener listenerIM;
 
     public void setListMahasiswa(ArrayList<ThesesItem> listMahasiswa) {
         this.listMahasiswa = listMahasiswa;
         notifyDataSetChanged();
     }
 
-    public AdapterMahasiswa(ItemMahasiswaClickListener listenerIM) {
+    public AdapterMahasiswa() {
         this.listenerIM = listenerIM;
 
     }
@@ -44,10 +50,10 @@ public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.Mah
         ThesesItem mahasiswa = listMahasiswa.get(position);
         holder.nama.setText(mahasiswa.getStudent().getName());
         holder.nim.setText(mahasiswa.getStudent().getNim());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.imageProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 listenerIM.onItemMahasiswaClick(mahasiswa);
             }
         });
@@ -64,26 +70,34 @@ public class AdapterMahasiswa extends RecyclerView.Adapter <AdapterMahasiswa.Mah
         void onItemMahasiswaClick(ThesesItem mahasiswa);
     }
 
-    public class MahasiswaViewHolder extends RecyclerView.ViewHolder /*implements View.OnClickListener*/ {
+    public class MahasiswaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public ImageView imageProfil;
         public TextView nama, nim;
 
 
-        public MahasiswaViewHolder(@NonNull View itemView) {
+        public MahasiswaViewHolder (@NonNull View itemView) {
             super(itemView);
 
             imageProfil = itemView.findViewById(R.id.imageViewMahasiswa);
             nama = itemView.findViewById(R.id.textViewMahasiswaList);
             nim = itemView.findViewById(R.id.textView2nimMahasiswaList);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    ThesesItem mahasiswa = listMahasiswa.get(getBindingAdapterPosition());
-                    listenerIM.onItemMahasiswaClick(mahasiswa);
-                }
-            });
+            itemView.setOnClickListener(this);
+
         }
+
+        @Override
+        public void onClick(View view) {
+            ThesesItem thesesItem = listMahasiswa.get(getAdapterPosition());
+            listenerIM.onItemMahasiswaClick(thesesItem);
+
+        }
+        //  @Override
+       // public void onClick(View view) {
+
+           // Mahasiswa mahasiswa = listMahasiswa.get(getAdapterPosition());
+          //  listenerIM.onItemMahasiswaClick(mahasiswa);
+        //}
     }
 }

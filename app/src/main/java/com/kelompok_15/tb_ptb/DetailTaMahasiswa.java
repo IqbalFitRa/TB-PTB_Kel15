@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class DetailTaMahasiswa extends AppCompatActivity {
 
@@ -60,5 +61,26 @@ public class DetailTaMahasiswa extends AppCompatActivity {
                 startActivity(inputNilaiIn);
             }
         });
+        Intent detailIntent = getIntent();
+        if (detailIntent != null){
+
+//            student = (Student) detailIntent.getSerializableExtra("data");
+//
+//            String nama = student.getName();
+//            String nim = student.getNim();
+//            String tempat = student.getBirthplace();
+//            String tanggal = student.getBirthday();
+//            String nomor = student.getPhone();
+//
+//            nama2.setText(nama);
+//            nim2.setText(nim);
+//            tempatlhr.setText(tempat);
+//            tanggallhr.setText(tanggal);
+//            nohp.setText(nomor);
+
+            String namaMahasiswa = detailIntent.getStringExtra("NAMA_MAHASISWA");
+            TextView textNamaMahasiswa = findViewById(R.id.namaDetailTA);
+            textNamaMahasiswa.setText(namaMahasiswa);
+        }
     }
 }

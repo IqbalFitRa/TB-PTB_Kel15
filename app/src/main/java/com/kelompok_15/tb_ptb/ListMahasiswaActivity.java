@@ -51,7 +51,8 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
         rvMahasiswa = findViewById(R.id.rv_listmahasiswa);
         rvMahasiswa.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new AdapterMahasiswa(this::onItemMahasiswaClick);
+        adapter = new AdapterMahasiswa();
+        adapter.setListenerIM(this);
         rvMahasiswa.setAdapter(adapter);
 
 
@@ -65,30 +66,91 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
         call.enqueue(new Callback<ListMahasiswaResponse>() {
             @Override
             public void onResponse(Call<ListMahasiswaResponse> call, Response<ListMahasiswaResponse> response) {
-
                 Log.d("ListMahasiswa-Debug", response.toString());
                 ListMahasiswaResponse listMahasiswaResponse1 = response.body();
                 if (listMahasiswaResponse1 != null){
                     List<ThesesItem> theses = listMahasiswaResponse1.getTheses();
                     adapter.setListMahasiswa((ArrayList<ThesesItem>) theses);
 
+
+
                 }
             }
 
             @Override
             public void onFailure(Call<ListMahasiswaResponse> call, Throwable t) {
-
+                Log.e("failure",t.getLocalizedMessage());
             }
         });
 
 
     }
 
+
+   /* public ArrayList<Mahasiswa> getMahasiswa(){
+
+        ArrayList<Mahasiswa> listMahasiswa = new ArrayList<>();
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "AntooKeren",
+                "2011529033"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "KambingFristail",
+                "2011528891"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "MaimunahNyeker",
+                "2011528894"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "TempelengHepi",
+                "2011527811"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "PalaOerang",
+                "2011528145"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "MantapNgkError",
+                "2011524114"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "Errordikit",
+                "2011524133"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "Pogramrunning",
+                "2011524521"
+        ));
+        listMahasiswa.add(new Mahasiswa(
+                null,
+                "Brodokalah",
+                "2011525321"
+        ));
+
+        return listMahasiswa;
+    }*/
+
     @Override
     public void onItemMahasiswaClick(ThesesItem mahasiswa) {
 
-        startActivity(new Intent(this, DetailMahasiswaActivity.class).putExtra("data",mahasiswa));
+//        startActivity(new Intent(this, DetailMahasiswaActivity.class).putExtra("data",mahasiswa));
+
+        //jan dihapus
+        Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
+        listmahasiswa.putExtra("NAMA_MAHASISWA", mahasiswa.getStudent().getName());
+        startActivity(listmahasiswa);
+        //
 
     }
+
 
 }

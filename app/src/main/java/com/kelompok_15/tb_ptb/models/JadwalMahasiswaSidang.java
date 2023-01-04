@@ -7,6 +7,8 @@ public class JadwalMahasiswaSidang {
     String nim;
     String tanggal;
 
+    public JadwalMahasiswaSidang(){}
+
     public JadwalMahasiswaSidang(String gambar, String nama_mahasiswa, String nim, String tanggal) {
         this.gambar = gambar;
         this.nama_mahasiswa = nama_mahasiswa;

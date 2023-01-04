@@ -7,20 +7,26 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.kelompok_15.tb_ptb.adapters.AdapterJadwal;
 import com.kelompok_15.tb_ptb.models.JadwalMahasiswaSidang;
+import com.kelompok_15.tb_ptb.retrofit.ListJadwal;
+import com.kelompok_15.tb_ptb.retrofit.ListJadwalSidangItem;
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ListJadwalMahasiswaSidangActivity extends AppCompatActivity implements AdapterJadwal.ItemJadwalClickListener {
 
     private RecyclerView recyclerjadwal;
+    private AdapterJadwal adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,18 +37,37 @@ public class ListJadwalMahasiswaSidangActivity extends AppCompatActivity impleme
         String token = sharedPreferences.getString("token", "");
 
         recyclerjadwal = findViewById(R.id.recycler_jadwal_seminar);
+        recyclerjadwal.setLayoutManager(new LinearLayoutManager(this));
+
+        adapter = new AdapterJadwal(this::ClickedJadwal);
+        recyclerjadwal.setAdapter(adapter);
+
+        /*recyclerjadwal = findViewById(R.id.recycler_jadwal_seminar);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this );
 
         AdapterJadwal adapter = new AdapterJadwal(getJadwal());
         adapter.setListener(this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this );
-
-        recyclerjadwal.setLayoutManager(layoutManager);
-        recyclerjadwal.setAdapter(adapter);
+        recyclerjadwal.setAdapter(adapter);*/
 
         //minta data ke server
-        //MainInterface mainInterface = RetrofitClient.getService();
-        //Call<ListSidang> call = mainInterface.listsidang("Bearer " + token);
-    }
+        MainInterface mainInterface = RetrofitClient.getService();
+        Call<ListJadwal> call = mainInterface.listjadwal (209, "Bearer " + token);
+        call.enqueue(new Callback<ListJadwal>() {
+            @Override
+            public void onResponse(Call<ListJadwal> call, Response<ListJadwal> response) {
+
+                ListJadwal listJadwal = response,body();
+                if(listJadwal != null){
+                    List<ListJadwalSidangItem> seminars = listJadwal.getSeminars();
+                    adapter.setItemList(seminars);
+                    recyclerjadwal.setAdapter(adapter);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ListJadwal> call, Throwable t){
+                Log.d("failure", t.getLocalizedMessage());
+            }
 
     public ArrayList<JadwalMahasiswaSidang> getJadwal(){
         ArrayList<JadwalMahasiswaSidang> ListJadwal = new ArrayList<>();

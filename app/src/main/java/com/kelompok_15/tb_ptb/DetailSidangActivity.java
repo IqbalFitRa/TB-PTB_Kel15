@@ -16,6 +16,7 @@ import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.Pivot;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
 
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -23,8 +24,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DetailSidangActivity extends AppCompatActivity {
-    TextView pembimbing1TASidang,NIPpembimbing1TASidang,pembimbing2TASidang,NIPpembimbing2TASidang, tanggalSidang, jamMulaiSidang, jamSelesaiSidang,lokasiSidang,nilaiSidang;
-    ExaminersItem examiners;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,49 +33,49 @@ public class DetailSidangActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
         String token = sharedPreferences.getString("token", "");
 
-        pembimbing1TASidang = findViewById(R.id.pembimbing1TASidang);
-        NIPpembimbing1TASidang = findViewById(R.id.NIPpembimbing1TASidang);
-        pembimbing2TASidang = findViewById(R.id.pembimbing2TASidang);
-        NIPpembimbing2TASidang = findViewById(R.id.NIPpembimbing2TASidang);
-        tanggalSidang = findViewById(R.id.tanggalSidang);
-        jamMulaiSidang = findViewById(R.id.jamMulaiSidang);
-        jamSelesaiSidang = findViewById(R.id.jamSelesaiSidang);
-        lokasiSidang = findViewById(R.id.lokasiSidang);
-        nilaiSidang = findViewById(R.id.nilaiSidang);
-
-        //minta data ke server
         MainInterface mainInterface = RetrofitClient.getService();
-        Call<DetailSidangResponse> call = mainInterface.detailSidangTa(309, "Bearer " + token);
-        call.enqueue(new Callback<DetailSidangResponse>() {
+        Call<DetailSidangResponse> call = mainInterface.detailSidangTa(277,"Bearer " + token);
+        call.enqueue((new Callback<DetailSidangResponse>() {
             @Override
             public void onResponse(Call<DetailSidangResponse> call, Response<DetailSidangResponse> response) {
+                Log.e("Success", response.toString());
+                
                 DetailSidangResponse detailSidangResponse = response.body();
+                    
+//                    String pembimbing1Sidang = detailSidangResponse.getExaminers().getName();
+//                    String NIPpembimbing1TASidang = detailSidangResponse.getExaminers().getNIP();
+                String tanggalSidang = detailSidangResponse.getTrialAt();
+                String jamMulaiSidang = detailSidangResponse.getStartAt();
+                String jamSelesaiSidang = detailSidangResponse.getEndAt();
+//                Object lokasiSidang = detailSidangResponse.getRoomId();
+                String nilaiSidang = detailSidangResponse.getGrade();
 
-                Intent detailSidangTa = getIntent();
-                if (detailSidangTa.getExtras() != null) {
-                    examiners = (ExaminersItem) detailSidangTa.getSerializableExtra("data");
-                    String pembimbing1TASidangData = examiners.getName();
-                    String  pembimbing2TASidangData = examiners.getName();
-                    String NIPpembimbing1TASidangData = examiners.getNip();
-                    String NIPpembimbing2TASidangData = examiners.getNip();
+                TextView tanggalSidangData = findViewById(R.id.tanggalSidang);
+                TextView jamMulaiSidangData = findViewById(R.id.jamMulaiSidang);
+                TextView jamSelesaiSidangData = findViewById(R.id.jamSelesaiSidang);
+//                TextView lokasiSidangData = findViewById(R.id.lokasiSidang);
+                TextView nilaiSidangData = findViewById(R.id.nilaiSidang);
 
-                    pembimbing1TASidang.setText(pembimbing1TASidangData);
-                    pembimbing2TASidang.setText(pembimbing2TASidangData);
-                    NIPpembimbing1TASidang.setText(NIPpembimbing1TASidangData);
-                    NIPpembimbing2TASidang.setText(NIPpembimbing2TASidangData);
-                }
-                if(detailSidangResponse != null){
-                    List<ExaminersItem> examiners = detailSidangResponse.getExaminers();
-                }
+
+                tanggalSidangData.setText(tanggalSidang);
+                jamMulaiSidangData.setText(jamMulaiSidang);
+                jamSelesaiSidangData.setText(jamSelesaiSidang);
+//                lokasiSidangData.set(lokasiSidang);
+                nilaiSidangData.setText(nilaiSidang);
 
 
             }
 
             @Override
             public void onFailure(Call<DetailSidangResponse> call, Throwable t) {
-                Log.e("failure", t.getLocalizedMessage());
+            Log.e("failure", t.getLocalizedMessage());
             }
-        });
+        }));
+        
+        
+
+       
+
 
 
     }

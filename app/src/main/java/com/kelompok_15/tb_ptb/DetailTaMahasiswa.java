@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
 import com.kelompok_15.tb_ptb.retrofit.detailtaMahasiswareal.DetailTAMahasiswa1Response;
+import com.kelompok_15.tb_ptb.retrofit.detialTAmahasiswa.DetailTAResponse;
 
 
 import org.w3c.dom.Text;
@@ -51,17 +52,35 @@ public class DetailTaMahasiswa extends AppCompatActivity {
 
             int idstudent2 = intentExtra.getIntExtra("id", 0);
 
-            Call<DetailTAMahasiswa1Response> call = mainInterface.detailtaMahasiswa(token, idstudent2);
-            call.enqueue(new Callback<DetailTAMahasiswa1Response>() {
+            Call<DetailTAResponse> call = mainInterface.detailtaresponse(token,idstudent2);
+            call.enqueue(new Callback<DetailTAResponse>() {
                 @Override
-                public void onResponse(Call<DetailTAMahasiswa1Response> call, Response<DetailTAMahasiswa1Response> response) {
-                    Log.e("Log", response.toString());
+                public void onResponse(Call<DetailTAResponse> call, Response<DetailTAResponse> response) {
+                    Log.e("Suc-", response.toString());
+
+                    DetailTAResponse detailTAResponse = response.body();
+
+                    String nama = detailTAResponse.getStudent().getName();
+                    String nim = detailTAResponse.getStudent().getNim();
+                    String judul = detailTAResponse.getTitle();
+                    String ringkasan = detailTAResponse.getJsonMemberAbstract();
+
+                    TextView castnama = findViewById(R.id.namaDetailTA);
+                    TextView castnim = findViewById(R.id.nimDetailTA);
+                    TextView castjudul = findViewById(R.id.judul2DetailTA);
+                    TextView castringkasan = findViewById(R.id.ringkasan2DetailTA);
+
+                    castnama.setText(nama);
+                    castnim.setText(nim);
+                    castjudul.setText(judul);
+                    castringkasan.setText(ringkasan);
+
 
                 }
 
                 @Override
-                public void onFailure(Call<DetailTAMahasiswa1Response> call, Throwable t) {
-                    Log.e("Fail", t.getLocalizedMessage());
+                public void onFailure(Call<DetailTAResponse> call, Throwable t) {
+                    Log.e("fail-", t.getLocalizedMessage());
                 }
             });
 

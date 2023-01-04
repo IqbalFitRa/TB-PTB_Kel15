@@ -3,6 +3,7 @@ package com.kelompok_15.tb_ptb.retrofit;
 import com.kelompok_15.tb_ptb.DetailMahasiswaActivity;
 import com.kelompok_15.tb_ptb.retrofit.detailmahasiswa.DetailMahasiswaResponse;
 import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.DetailTAResponse;
+import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.SupervisorsItem;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ThesesItem;
 
@@ -48,6 +49,11 @@ public interface MainInterface {
     //309 detailTA
     @GET("api/theses/309")
     Call<DetailTAResponse> detailTaMahasiswaresponse (
+            @Header("Authorization") String token
+    );
+
+    @GET("api/theses/309")
+    Call<SupervisorsItem> supervisors (
             @Header("Authorization") String token
     );
 }

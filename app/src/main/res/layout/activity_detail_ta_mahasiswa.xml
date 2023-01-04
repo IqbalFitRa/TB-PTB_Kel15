@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2DetailTA"
-        android:layout_width="410dp"
-        android:layout_height="149dp"
+        android:layout_width="411dp"
+        android:layout_height="182dp"
         android:background="@color/design_default_color_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,10 +22,10 @@
             android:text="Input Nilai"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintHorizontal_bias="0.835"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.265" />
+            app:layout_constraintVertical_bias="0.841" />
 
         <Button
             android:id="@+id/buttonDetailTA5FromBatal"
@@ -38,12 +38,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.276" />
+
+        <TextView
+            android:id="@+id/namaDetailTA"
+            android:layout_width="174dp"
+            android:layout_height="62dp"
+            android:text="naamaa"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonDetailTA5FromBatal"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.291" />
+
+        <TextView
+            android:id="@+id/nimDetailTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/namaDetailTA"
+            app:layout_constraintStart_toStartOf="@+id/namaDetailTA"
+            app:layout_constraintTop_toBottomOf="@+id/namaDetailTA" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/contrainLayout3DetailTA"
         android:layout_width="413dp"
-        android:layout_height="582dp"
+        android:layout_height="541dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -119,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:text="Dosen Pembimbing 1"
+            android:text="Dosen Pembimbing "
             android:textSize="15dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -129,40 +152,16 @@
 
         <TextView
             android:id="@+id/pembimbing11DetailTA"
-            android:layout_width="238dp"
-            android:layout_height="30dp"
+            android:layout_width="359dp"
+            android:layout_height="38dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
             android:text="Alexander "
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/pembimbing1DetailTA"
-            app:layout_constraintTop_toTopOf="@+id/pembimbing1DetailTA" />
-
-        <TextView
-            android:id="@+id/pembimbing2DetailTA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="Dosen Pembimbing 2"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.048"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pembimbing11DetailTA" />
-
-        <TextView
-            android:id="@+id/pembimbing22DetailTA"
-            android:layout_width="230dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="22dp"
-            android:text="Alexanderr"
-            android:textSize="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/pembimbing2DetailTA"
-            app:layout_constraintTop_toTopOf="@+id/pembimbing2DetailTA" />
+            app:layout_constraintTop_toTopOf="@+id/pembimbing1DetailTA" />
 
         <Button
             android:id="@+id/ListLogbookDetailTAMahasiswa"

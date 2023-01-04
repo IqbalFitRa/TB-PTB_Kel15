@@ -70,11 +70,12 @@
 
     <TextView
         android:id="@+id/pembimbingDetailLogbook"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Ricky Akbar, M.Kom."
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pembimbingTitleDetailLogbook" />
 
@@ -140,63 +141,69 @@
 
     <TextView
         android:id="@+id/abstrakDetailLogbook"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="heheheh"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/abstrakTitleDetailLogbook" />
 
     <TextView
         android:id="@+id/judulTADetailLogbook"
         android:layout_width="381dp"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Sistem Informasi Penunjang Keputusan Laptop Terbaik untuk Mahasiswa Jurusan SI"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/judulTATitleDetailLogbook" />
 
     <TextView
         android:id="@+id/progressDetailLogbook"
-        android:layout_width="match_parent"
-        android:layout_height="21dp"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Konsultasi Alternatif Judul Tugas Akhir"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressTitleDetailLogbook" />
 
     <TextView
         android:id="@+id/statusDetailLogbook"
-        android:layout_width="247dp"
-        android:layout_height="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:lineSpacingExtra="8sp"
         android:text="apaya"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusTitleDetailLogbook" />
 
     <TextView
         android:id="@+id/problemDetailLogbook"
-        android:layout_width="247dp"
-        android:layout_height="21dp"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:lineSpacingExtra="8sp"
         android:text="apaya"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/problemTitleDetailLogbook" />
 
     <TextView
         android:id="@+id/tanggalDetailLogbook"
-        android:layout_width="match_parent"
-        android:layout_height="19dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
         android:text="Senin, 17 Juli 2022"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tanggalTitleDetailLogbook" />
 

@@ -90,7 +90,8 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
     public void onItemMahasiswaClick(ThesesItem thesesItem) {
 
         Intent listmahasiswa = new Intent(this, DetailMahasiswaActivity.class);
-        listmahasiswa.putExtra("NAMA_MAHASISWA", thesesItem.getStudent().getName());
+        listmahasiswa.putExtra("nama", thesesItem.getStudent().getName());
+        listmahasiswa.putExtra("ID", thesesItem.getId());
         startActivity(listmahasiswa);
     }
 

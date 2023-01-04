@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
+import com.kelompok_15.tb_ptb.retrofit.detailMahasiswaReal.DetailMahasiswa1Response;
 import com.kelompok_15.tb_ptb.retrofit.detailmahasiswa.DetailMahasiswaResponse;
 import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.DetailTAResponse;
 import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.SupervisorsItem;
@@ -21,6 +22,7 @@ import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.Student;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ThesesItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -31,19 +33,18 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 
     Button button;
     String namaMahasiswa, nimMahasiswa;
-    TextView namaDetailMahasiswa, nimDetailMahasiswa;
+
     String gettoken, token;
     public ImageView imageProfil2;
     public TextView nama2, nim2, tempatlhr, tanggallhr, nohp;
     Student student;
     ThesesItem thesesItem;
+    Intent detailIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_mahasiswa);
-
-        getDetailMahasiswa();
 
 
         button = findViewById(R.id.DetailTADetailMahasiswa);
@@ -58,21 +59,76 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
             }
         });
 
-        //jan dihapus
-//        Intent detailIntent = getIntent();
-//        if (detailIntent != null) {
+//        getDetailMahasiswa();
+
+////        jan dihapus
+        detailIntent = getIntent();
+        if (detailIntent != null) {
+
+//            String namaMahasiswa = detailIntent.getStringExtra("nama");
+//            TextView namaDetailMahasiswa = findViewById(R.id.namaDetailMahasiswa);
+//            namaDetailMahasiswa.setText(namaMahasiswa);
+
+
+            MainInterface mainInterface = RetrofitClient.getService();
+            SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY", MODE_PRIVATE);
+            gettoken = sharedPreferences.getString("token", "");
+            token = "Bearer " + gettoken;
+            Toast.makeText(DetailMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
 //
-////            thesesItem = (ThesesItem) detailIntent.getSerializableExtra("data");
+            int idstudent = detailIntent.getIntExtra("ID", 0);
+
+            Call<DetailMahasiswa1Response> call = mainInterface.detailMahasiswa(token, idstudent);
+            call.enqueue(new Callback<DetailMahasiswa1Response>() {
+                @Override
+                public void onResponse(Call<DetailMahasiswa1Response> call, Response<DetailMahasiswa1Response> response) {
+
+                    Log.e("Suc", response.toString());
+                    DetailMahasiswa1Response detailMahasiswa1Response = response.body();
+
+                    TextView castnama = findViewById(R.id.namaDetailMahasiswa);
+                    TextView castNim = findViewById(R.id.nimDetailMahasiswa);
+                    TextView casttnggl = findViewById(R.id.tepattanggallahir2DetailMahasiswa);
+                    TextView casttempat = findViewById(R.id.email2DetailMahasiswa);
+                    TextView castnohp = findViewById(R.id.noHP2DetailMahasiswa);
+
+                    String nama = detailMahasiswa1Response.getStudent().getName();
+                    String nim = detailMahasiswa1Response.getStudent().getNim();
+                    String tanggl = detailMahasiswa1Response.getStudent().getBirthday();
+                    String tempat = detailMahasiswa1Response.getStudent().getBirthplace();
+                    String nohp = detailMahasiswa1Response.getStudent().getPhone();
+
+                    castnama.setText(nama);
+                    castNim.setText(nim);
+                    casttnggl.setText(tanggl);
+                    casttempat.setText(tempat);
+                    castnohp.setText(nohp);
+
+
+                }
+
+                @Override
+                public void onFailure(Call<DetailMahasiswa1Response> call, Throwable t) {
+                    Log.e("error", t.getLocalizedMessage());
+                }
+            });
+
+//        Call<DetailMahasiswaResponse> call = mainInterface.detailmahasiswaresponse(token, idstudent);
+//        call.enqueue(new Callback<DetailMahasiswaResponse>() {
+//            @Override
+//            public void onResponse(Call<DetailMahasiswaResponse> call, Response<DetailMahasiswaResponse> response) {
 //
-////            student = (Student) detailIntent.getSerializableExtra("data");
-////
+//                DetailMahasiswaResponse detailMahasiswaResponse = response.body();
+//                castNim.setText(detailMahasiswaResponse.gets);
+//            }
+//
+//            @Override
+//            public void onFailure(Call<DetailMahasiswaResponse> call, Throwable t) {
+//                Log.e("T", t.getLocalizedMessage());
+//            }
+//        });
 //
 //
-//            String namaMahasiswa = detailIntent.getStringExtra("NAMA_MAHASISWA");
-//            TextView textNamaMahasiswa = findViewById(R.id.namaDetailMahasiswa);
-//            textNamaMahasiswa.setText(namaMahasiswa);
-//        }
-        //
 
 //        imageProfil2 = findViewById(R.id.imageViewDetailMahasiswa);
 //        nama2 = findViewById(R.id.namaDetailMahasiswa);
@@ -98,7 +154,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 //            tempatlhr.setText(tmptlhr);
 //            tanggallhr.setText(tnggllhr);
 //            nohp.setText(nohp1);
-    }
+        }
 
 
     /*Intent listmahasiswa = getIntent();
@@ -110,47 +166,51 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         /*nimDetailMahasiswa = findViewById(R.id.nimDetailMahasiswa);
         nimDetailMahasiswa.setText(nimMahasiswa);
     }*/
-    public void getDetailMahasiswa() {
-
-        MainInterface mainInterface = RetrofitClient.getService();
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY", MODE_PRIVATE);
-        gettoken = sharedPreferences.getString("token", "");
-        token = "Bearer " + gettoken;
-        Toast.makeText(DetailMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
-
-        Call<ThesesItem> call = mainInterface.theseitems(token);
-        call.enqueue(new Callback<ThesesItem>() {
-            @Override
-            public void onResponse(Call<ThesesItem> call, Response<ThesesItem> response) {
-
-                Log.e("Succ-", response.toString());
-                ThesesItem thesesItem = response.body();
-
-                String nama = thesesItem.getStudent().getName();
-                String nim = thesesItem.getStudent().getNim();
-                String tanggallahir = thesesItem.getStudent().getBirthplace();
-                String tempatlahir = thesesItem.getStudent().getBirthday();
-                String noHp = thesesItem.getStudent().getPhone();
-
-                TextView castNama = findViewById(R.id.namaDetailMahasiswa);
-                TextView castNim =  findViewById(R.id.nimDetailMahasiswa);
-                TextView casttnggl =  findViewById(R.id.tepattanggallahir2DetailMahasiswa);
-                TextView casttempat =  findViewById(R.id.email2DetailMahasiswa);
-                TextView castnohp =  findViewById(R.id.noHP2DetailMahasiswa);
+//    public void getDetailMahasiswa() {
+//
+//        MainInterface mainInterface = RetrofitClient.getService();
+//        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY", MODE_PRIVATE);
+//        gettoken = sharedPreferences.getString("token", "");
+//        token = "Bearer " + gettoken;
+//        Toast.makeText(DetailMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
 
 
-                castNama.setText(nama);
-                castNim.setText(nim);
-                casttempat.setText(tempatlahir);
-                casttnggl.setText(tanggallahir);
-                castnohp.setText(noHp);
-            }
+//        Call<ThesesItem> call = mainInterface.theseitems(token);
+//        call.enqueue(new Callback<ThesesItem>() {
+//            @Override
+//            public void onResponse(Call<ThesesItem> call, Response<ThesesItem> response) {
+//
+//                Log.e("Succ-", response.toString());
+//                ThesesItem thesesItem = response.body();
+//
+//                String nama = thesesItem.getStudent().getName();
+//                String nim = thesesItem.getStudent().getNim();
+//                String tanggallahir = thesesItem.getStudent().getBirthplace();
+//                String tempatlahir = thesesItem.getStudent().getBirthday();
+//                String noHp = thesesItem.getStudent().getPhone();
+//
+//                TextView castNama = findViewById(R.id.namaDetailMahasiswa);
+//                TextView castNim =  findViewById(R.id.nimDetailMahasiswa);
+//                TextView casttnggl =  findViewById(R.id.tepattanggallahir2DetailMahasiswa);
+//                TextView casttempat =  findViewById(R.id.email2DetailMahasiswa);
+//                TextView castnohp =  findViewById(R.id.noHP2DetailMahasiswa);
+//
+//
+//                castNama.setText(nama);
+//                castNim.setText(nim);
+//                casttempat.setText(tempatlahir);
+//                casttnggl.setText(tanggallahir);
+//                castnohp.setText(noHp);
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ThesesItem> call, Throwable t) {
+//                Log.e("Fail-", t.getLocalizedMessage());
+//            }
+//        });
 
-            @Override
-            public void onFailure(Call<ThesesItem> call, Throwable t) {
-                Log.e("Fail-", t.getLocalizedMessage());
-            }
-        });
 
     }
 }
+
+

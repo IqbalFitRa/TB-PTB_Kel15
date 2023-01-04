@@ -8,6 +8,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface MainInterface {
 
@@ -23,8 +24,15 @@ public interface MainInterface {
             @Header("Authorization") String token
     );
 
-    @GET("api/theses/309/logbooks")
-    Call<ListLogbook> listlogbook(@Header("Authorization") String token);
+    @GET("api/theses/{id}/logbooks")
+    Call<ListLogbook> listlogbook(
+            @Path("id") Integer id,
+            @Header("Authorization") String token);
+
+    @GET("api/theses/{id}/trials")
+    Call<DetailSidangResponse> detailSidangTa(
+            @Path("id") Integer thesis_id,
+            @Header("Authorization") String token);
 
 
 }

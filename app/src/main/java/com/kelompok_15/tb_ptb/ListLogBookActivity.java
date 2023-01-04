@@ -49,7 +49,7 @@ public class ListLogBookActivity extends AppCompatActivity implements AdapterLog
         //minta data ke serper
 
         MainInterface mainInterface = RetrofitClient.getService();
-        Call<ListLogbook> call = mainInterface.listlogbook("Bearer " + token);
+        Call<ListLogbook> call = mainInterface.listlogbook(309,"Bearer " + token);
         call.enqueue(new Callback<ListLogbook>() {
             @Override
             public void onResponse(Call<ListLogbook> call, Response<ListLogbook> response) {

@@ -4,6 +4,7 @@ import com.kelompok_15.tb_ptb.DetailMahasiswaActivity;
 import com.kelompok_15.tb_ptb.retrofit.detailmahasiswa.DetailMahasiswaResponse;
 import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.DetailTAResponse;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
+import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ThesesItem;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -38,6 +39,13 @@ public interface MainInterface {
             @Header("Authorization") String token
     );
 
+    //277 detailMahasiswa
+    @GET("api/theses/277")
+    Call<ThesesItem> theseitems (
+            @Header("Authorization") String token
+    );
+
+    //309 detailTA
     @GET("api/theses/309")
     Call<DetailTAResponse> detailTaMahasiswaresponse (
             @Header("Authorization") String token

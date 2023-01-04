@@ -1,4 +1,4 @@
-package com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa;
+package com.kelompok_15.tb_ptb.retrofit.detialTAmahasiswa;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
@@ -12,7 +12,7 @@ public class DetailTAResponse{
     private int studentId;
 
     @SerializedName("grade_by")
-    private Object gradeBy;
+    private int gradeBy;
 
     @SerializedName("created_at")
     private String createdAt;
@@ -61,7 +61,7 @@ public class DetailTAResponse{
         return studentId;
     }
 
-    public Object getGradeBy(){
+    public int getGradeBy(){
         return gradeBy;
     }
 

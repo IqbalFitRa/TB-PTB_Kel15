@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
-import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.DetailTAResponse;
-import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.SupervisorsItem;
+import com.kelompok_15.tb_ptb.retrofit.detailtaMahasiswareal.DetailTAMahasiswa1Response;
+
 
 import org.w3c.dom.Text;
 
@@ -26,6 +26,7 @@ public class DetailTaMahasiswa extends AppCompatActivity {
 
     Button inputNilai, batalTA, logBook, seminar, sidang;
     String gettoken,token;
+    Intent intentExtra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,35 @@ public class DetailTaMahasiswa extends AppCompatActivity {
 
 //        getDetailTA();
 //        getDetailTA2();
+
+        intentExtra = getIntent();
+        if (intentExtra != null) {
+
+            Log.e("ID -", String.valueOf(intentExtra.getIntExtra("id",0)));
+
+            MainInterface mainInterface = RetrofitClient.getService();
+            SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY", MODE_PRIVATE);
+            gettoken = sharedPreferences.getString("token", "");
+            token = "Bearer " + gettoken;
+//            Toast.makeText(DetailTaMahasiswa.this, token, Toast.LENGTH_SHORT).show();
+            Log.e("Token", token);
+
+
+            int idstudent2 = intentExtra.getIntExtra("id", 0);
+
+            Call<DetailTAMahasiswa1Response> call = mainInterface.detailtaMahasiswa(token, idstudent2);
+            call.enqueue(new Callback<DetailTAMahasiswa1Response>() {
+                @Override
+                public void onResponse(Call<DetailTAMahasiswa1Response> call, Response<DetailTAMahasiswa1Response> response) {
+                    Log.e("Log", response.toString());
+
+                }
+
+                @Override
+                public void onFailure(Call<DetailTAMahasiswa1Response> call, Throwable t) {
+                    Log.e("Fail", t.getLocalizedMessage());
+                }
+            });
 
 
         sidang = findViewById(R.id.DetailsidangDetailTAMahasiswa);
@@ -80,6 +110,7 @@ public class DetailTaMahasiswa extends AppCompatActivity {
                 startActivity(inputNilaiIn);
             }
         });
+
     }
 //    public void getDetailTA() {
 //        MainInterface mainInterface = RetrofitClient.getService();
@@ -154,4 +185,6 @@ public class DetailTaMahasiswa extends AppCompatActivity {
 //                Log.e("Fail", t.getLocalizedMessage());
 //            }
 //        });
+
     }
+}

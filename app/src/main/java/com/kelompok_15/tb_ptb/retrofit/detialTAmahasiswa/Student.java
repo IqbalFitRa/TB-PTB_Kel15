@@ -1,8 +1,8 @@
-package com.kelompok_15.tb_ptb.retrofit.detailmahasiswa;
+package com.kelompok_15.tb_ptb.retrofit.detialTAmahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ExaminersItem{
+public class Student{
 
     @SerializedName("birthday")
     private String birthday;
@@ -13,53 +13,41 @@ public class ExaminersItem{
     @SerializedName("gender")
     private int gender;
 
+    @SerializedName("year")
+    private int year;
+
     @SerializedName("department_id")
     private int departmentId;
-
-    @SerializedName("npwp")
-    private Object npwp;
 
     @SerializedName("photo")
     private Object photo;
 
     @SerializedName("created_at")
-    private String createdAt;
-
-    @SerializedName("association_type")
-    private int associationType;
+    private Object createdAt;
 
     @SerializedName("religion")
-    private int religion;
+    private Object religion;
 
     @SerializedName("nik")
     private String nik;
 
     @SerializedName("marital_status")
-    private int maritalStatus;
+    private Object maritalStatus;
 
-    @SerializedName("nip")
-    private String nip;
-
-    @SerializedName("karpeg")
-    private Object karpeg;
+    @SerializedName("nim")
+    private String nim;
 
     @SerializedName("birthplace")
     private String birthplace;
 
     @SerializedName("updated_at")
-    private String updatedAt;
+    private Object updatedAt;
 
     @SerializedName("phone")
     private String phone;
 
-    @SerializedName("nidn")
-    private String nidn;
-
     @SerializedName("name")
     private String name;
-
-    @SerializedName("pivot")
-    private Pivot pivot;
 
     @SerializedName("id")
     private int id;
@@ -79,27 +67,23 @@ public class ExaminersItem{
         return gender;
     }
 
-    public int getDepartmentId(){
-        return departmentId;
+    public int getYear(){
+        return year;
     }
 
-    public Object getNpwp(){
-        return npwp;
+    public int getDepartmentId(){
+        return departmentId;
     }
 
     public Object getPhoto(){
         return photo;
     }
 
-    public String getCreatedAt(){
+    public Object getCreatedAt(){
         return createdAt;
     }
 
-    public int getAssociationType(){
-        return associationType;
-    }
-
-    public int getReligion(){
+    public Object getReligion(){
         return religion;
     }
 
@@ -107,23 +91,19 @@ public class ExaminersItem{
         return nik;
     }
 
-    public int getMaritalStatus(){
+    public Object getMaritalStatus(){
         return maritalStatus;
     }
 
-    public String getNip(){
-        return nip;
-    }
-
-    public Object getKarpeg(){
-        return karpeg;
+    public String getNim(){
+        return nim;
     }
 
     public String getBirthplace(){
         return birthplace;
     }
 
-    public String getUpdatedAt(){
+    public Object getUpdatedAt(){
         return updatedAt;
     }
 
@@ -131,16 +111,8 @@ public class ExaminersItem{
         return phone;
     }
 
-    public String getNidn(){
-        return nidn;
-    }
-
     public String getName(){
         return name;
-    }
-
-    public Pivot getPivot(){
-        return pivot;
     }
 
     public int getId(){

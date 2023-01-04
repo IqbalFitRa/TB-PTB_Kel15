@@ -2,9 +2,7 @@ package com.kelompok_15.tb_ptb.retrofit;
 
 import com.kelompok_15.tb_ptb.DetailMahasiswaActivity;
 import com.kelompok_15.tb_ptb.retrofit.detailMahasiswaReal.DetailMahasiswa1Response;
-import com.kelompok_15.tb_ptb.retrofit.detailmahasiswa.DetailMahasiswaResponse;
 import com.kelompok_15.tb_ptb.retrofit.detailtaMahasiswareal.DetailTAMahasiswa1Response;
-import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.DetailTAResponse;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ThesesItem;
 
@@ -37,15 +35,17 @@ public interface MainInterface {
             @Header("Authorization") String token
     );
 
-    @GET("api/theses/277/trials/")
-    Call<DetailTAMahasiswa1Response> detailtaMahasiswa (
-            @Header("Authorization") String token
-    );
-
     //309 detailTA
     @GET("api/theses/{id}")
     Call<DetailMahasiswa1Response> detailMahasiswa (
             @Header("Authorization") String token,
             @Path("id") int id
     );
+
+    @GET("api/theses/{id}}")
+    Call<DetailTAMahasiswa1Response> detailtaMahasiswa (
+            @Header("Authorization") String token,
+            @Path("id") int id
+    );
+
 }

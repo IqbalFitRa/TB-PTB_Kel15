@@ -60,7 +60,8 @@ public class ListMahasiswaActivity extends AppCompatActivity implements AdapterM
         SharedPreferences sharedPreferences = getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY",MODE_PRIVATE);
         gettoken = sharedPreferences.getString("token","");
         token = "Bearer " + gettoken;
-        Toast.makeText(ListMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(ListMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
+        Log.e("Token" ,token );
 
         Call<ListMahasiswaResponse> call = mainInterface.listmahasiswaresponse(token);
         call.enqueue(new Callback<ListMahasiswaResponse>() {

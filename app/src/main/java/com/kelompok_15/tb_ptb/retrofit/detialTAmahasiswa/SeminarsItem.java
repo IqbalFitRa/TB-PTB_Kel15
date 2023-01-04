@@ -1,4 +1,4 @@
-package com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa;
+package com.kelompok_15.tb_ptb.retrofit.detialTAmahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -11,22 +11,22 @@ public class SeminarsItem{
     private int thesisId;
 
     @SerializedName("file_slide")
-    private String fileSlide;
+    private Object fileSlide;
 
     @SerializedName("registered_at")
-    private String registeredAt;
+    private Object registeredAt;
 
     @SerializedName("method")
     private int method;
 
     @SerializedName("file_report")
-    private String fileReport;
+    private Object fileReport;
 
     @SerializedName("recommendation")
-    private Object recommendation;
+    private int recommendation;
 
     @SerializedName("description")
-    private Object description;
+    private String description;
 
     @SerializedName("created_at")
     private String createdAt;
@@ -35,7 +35,7 @@ public class SeminarsItem{
     private String seminarAt;
 
     @SerializedName("file_journal")
-    private String fileJournal;
+    private Object fileJournal;
 
     @SerializedName("updated_at")
     private String updatedAt;
@@ -47,7 +47,7 @@ public class SeminarsItem{
     private Object fileAttendance;
 
     @SerializedName("online_url")
-    private Object onlineUrl;
+    private String onlineUrl;
 
     @SerializedName("status")
     private int status;
@@ -60,11 +60,11 @@ public class SeminarsItem{
         return thesisId;
     }
 
-    public String getFileSlide(){
+    public Object getFileSlide(){
         return fileSlide;
     }
 
-    public String getRegisteredAt(){
+    public Object getRegisteredAt(){
         return registeredAt;
     }
 
@@ -72,15 +72,15 @@ public class SeminarsItem{
         return method;
     }
 
-    public String getFileReport(){
+    public Object getFileReport(){
         return fileReport;
     }
 
-    public Object getRecommendation(){
+    public int getRecommendation(){
         return recommendation;
     }
 
-    public Object getDescription(){
+    public String getDescription(){
         return description;
     }
 
@@ -92,7 +92,7 @@ public class SeminarsItem{
         return seminarAt;
     }
 
-    public String getFileJournal(){
+    public Object getFileJournal(){
         return fileJournal;
     }
 
@@ -108,7 +108,7 @@ public class SeminarsItem{
         return fileAttendance;
     }
 
-    public Object getOnlineUrl(){
+    public String getOnlineUrl(){
         return onlineUrl;
     }
 

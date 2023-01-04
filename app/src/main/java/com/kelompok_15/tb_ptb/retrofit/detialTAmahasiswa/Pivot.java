@@ -1,4 +1,4 @@
-package com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa;
+package com.kelompok_15.tb_ptb.retrofit.detialTAmahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 

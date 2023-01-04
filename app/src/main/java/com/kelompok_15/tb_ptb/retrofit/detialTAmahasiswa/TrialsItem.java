@@ -1,4 +1,4 @@
-package com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa;
+package com.kelompok_15.tb_ptb.retrofit.detialTAmahasiswa;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -8,7 +8,7 @@ public class TrialsItem{
     private Object roomId;
 
     @SerializedName("end_at")
-    private Object endAt;
+    private String endAt;
 
     @SerializedName("thesis_id")
     private int thesisId;
@@ -23,7 +23,7 @@ public class TrialsItem{
     private int method;
 
     @SerializedName("file_report")
-    private String fileReport;
+    private Object fileReport;
 
     @SerializedName("description")
     private Object description;
@@ -35,7 +35,7 @@ public class TrialsItem{
     private int thesisRubricId;
 
     @SerializedName("start_at")
-    private Object startAt;
+    private String startAt;
 
     @SerializedName("file_journal")
     private String fileJournal;
@@ -47,10 +47,10 @@ public class TrialsItem{
     private String updatedAt;
 
     @SerializedName("grade")
-    private Object grade;
+    private String grade;
 
     @SerializedName("trial_at")
-    private Object trialAt;
+    private String trialAt;
 
     @SerializedName("id")
     private int id;
@@ -65,7 +65,7 @@ public class TrialsItem{
         return roomId;
     }
 
-    public Object getEndAt(){
+    public String getEndAt(){
         return endAt;
     }
 
@@ -85,7 +85,7 @@ public class TrialsItem{
         return method;
     }
 
-    public String getFileReport(){
+    public Object getFileReport(){
         return fileReport;
     }
 
@@ -101,7 +101,7 @@ public class TrialsItem{
         return thesisRubricId;
     }
 
-    public Object getStartAt(){
+    public String getStartAt(){
         return startAt;
     }
 
@@ -117,11 +117,11 @@ public class TrialsItem{
         return updatedAt;
     }
 
-    public Object getGrade(){
+    public String getGrade(){
         return grade;
     }
 
-    public Object getTrialAt(){
+    public String getTrialAt(){
         return trialAt;
     }
 

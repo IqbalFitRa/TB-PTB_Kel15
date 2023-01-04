@@ -10,19 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
 import com.kelompok_15.tb_ptb.retrofit.detailMahasiswaReal.DetailMahasiswa1Response;
-import com.kelompok_15.tb_ptb.retrofit.detailmahasiswa.DetailMahasiswaResponse;
-import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.DetailTAResponse;
-import com.kelompok_15.tb_ptb.retrofit.detailtamahasiswa.SupervisorsItem;
-import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ListMahasiswaResponse;
+import com.kelompok_15.tb_ptb.retrofit.detailMahasiswaReal.TrialsItem;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.Student;
 import com.kelompok_15.tb_ptb.retrofit.listmahasiswa.ThesesItem;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -46,36 +41,19 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_mahasiswa);
 
-
-        button = findViewById(R.id.DetailTADetailMahasiswa);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-//                getDetailTA();
-
-                Intent intent = new Intent(DetailMahasiswaActivity.this, DetailTaMahasiswa.class);
-                startActivity(intent);
-            }
-        });
-
 //        getDetailMahasiswa();
 
 ////        jan dihapus
         detailIntent = getIntent();
         if (detailIntent != null) {
 
-//            String namaMahasiswa = detailIntent.getStringExtra("nama");
-//            TextView namaDetailMahasiswa = findViewById(R.id.namaDetailMahasiswa);
-//            namaDetailMahasiswa.setText(namaMahasiswa);
-
-
             MainInterface mainInterface = RetrofitClient.getService();
             SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY", MODE_PRIVATE);
             gettoken = sharedPreferences.getString("token", "");
             token = "Bearer " + gettoken;
-            Toast.makeText(DetailMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
-//
+//            Toast.makeText(DetailMahasiswaActivity.this, token, Toast.LENGTH_SHORT).show();
+            Log.e("Token" ,token );
+
             int idstudent = detailIntent.getIntExtra("ID", 0);
 
             Call<DetailMahasiswa1Response> call = mainInterface.detailMahasiswa(token, idstudent);
@@ -104,12 +82,24 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
                     casttempat.setText(tempat);
                     castnohp.setText(nohp);
 
-
                 }
 
                 @Override
                 public void onFailure(Call<DetailMahasiswa1Response> call, Throwable t) {
                     Log.e("error", t.getLocalizedMessage());
+                }
+            });
+
+            button = findViewById(R.id.DetailTADetailMahasiswa);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    int idmaha = idstudent;
+
+                    Intent intentExtra = new Intent(DetailMahasiswaActivity.this, DetailTaMahasiswa.class);
+                    intentExtra.putExtra("id", idmaha);
+                    startActivity(intentExtra);
                 }
             });
 
@@ -208,8 +198,6 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 //                Log.e("Fail-", t.getLocalizedMessage());
 //            }
 //        });
-
-
     }
 }
 

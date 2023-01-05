@@ -18,12 +18,14 @@ import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
 
 
 import java.util.List;
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DetailSidangActivity extends AppCompatActivity {
+    ExaminersItem examiners;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +36,11 @@ public class DetailSidangActivity extends AppCompatActivity {
         String token = sharedPreferences.getString("token", "");
 
 
+        int [] listexaminers= {R.id.penguji1TASidang, R.id.penguji2TASidang};
+        List<String> list = new ArrayList<>();
+
         MainInterface mainInterface = RetrofitClient.getService();
-        Call<DetailSidangResponse> call = mainInterface.detailSidangTa(309,"Bearer " + token);
+        Call<DetailSidangResponse> call = mainInterface.detailSidangTa(277,"Bearer " + token);
         call.enqueue((new Callback<DetailSidangResponse>() {
             @Override
             public void onResponse(Call<DetailSidangResponse> call, Response<DetailSidangResponse> response) {
@@ -63,8 +68,20 @@ public class DetailSidangActivity extends AppCompatActivity {
                     nilaiSidangData.setText(nilaiSidang);
                     fileSlideSidangData.setText(fileSlideSidang);
                     fileJurnalSidangData.setText(fileJurnalSidang);
-                }
 
+                try {
+                    for (int a = 0 ; a<detailSidangResponse.getExaminers().size() ; a++){
+                        String penguji = detailSidangResponse.getExaminers().get(a).getName();
+                        list.add(penguji);
+                    }
+                    for (int b = 0; b < listexaminers.length; b++){
+                        ((TextView)findViewById(listexaminers[b])).setText(list.get(b));
+                    }
+
+                }catch (IndexOutOfBoundsException e){
+
+                }
+                }
 
             @Override
             public void onFailure(Call<DetailSidangResponse> call, Throwable t) {

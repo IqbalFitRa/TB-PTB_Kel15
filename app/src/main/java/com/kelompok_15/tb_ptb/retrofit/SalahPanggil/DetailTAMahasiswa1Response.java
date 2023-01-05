@@ -1,4 +1,4 @@
-package com.kelompok_15.tb_ptb.retrofit.detailtaMahasiswareal;
+package com.kelompok_15.tb_ptb.retrofit.SalahPanggil;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;

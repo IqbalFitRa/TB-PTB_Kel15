@@ -13,11 +13,12 @@ import android.widget.Toast;
 
 import com.kelompok_15.tb_ptb.retrofit.MainInterface;
 import com.kelompok_15.tb_ptb.retrofit.RetrofitClient;
-import com.kelompok_15.tb_ptb.retrofit.detailtaMahasiswareal.DetailTAMahasiswa1Response;
 import com.kelompok_15.tb_ptb.retrofit.detialTAmahasiswa.DetailTAResponse;
+import com.kelompok_15.tb_ptb.retrofit.detialTAmahasiswa.SupervisorsItem;
 
 
-import org.w3c.dom.Text;
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,6 +29,7 @@ public class DetailTaMahasiswa extends AppCompatActivity {
     Button inputNilai, batalTA, logBook, seminar, sidang;
     String gettoken,token;
     Intent intentExtra;
+    SupervisorsItem pembimbing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +39,15 @@ public class DetailTaMahasiswa extends AppCompatActivity {
 //        getDetailTA();
 //        getDetailTA2();
 
+
+
         intentExtra = getIntent();
         if (intentExtra != null) {
 
             Log.e("ID -", String.valueOf(intentExtra.getIntExtra("id",0)));
+
+            int [] listdosen= {R.id.pembimbing11DetailTA, R.id.pembimbing11DetailTA3};
+            List<String> list = new ArrayList<>();
 
             MainInterface mainInterface = RetrofitClient.getService();
             SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY", MODE_PRIVATE);
@@ -65,6 +72,7 @@ public class DetailTaMahasiswa extends AppCompatActivity {
                     String judul = detailTAResponse.getTitle();
                     String ringkasan = detailTAResponse.getJsonMemberAbstract();
 
+
                     TextView castnama = findViewById(R.id.namaDetailTA);
                     TextView castnim = findViewById(R.id.nimDetailTA);
                     TextView castjudul = findViewById(R.id.judul2DetailTA);
@@ -75,6 +83,18 @@ public class DetailTaMahasiswa extends AppCompatActivity {
                     castjudul.setText(judul);
                     castringkasan.setText(ringkasan);
 
+                    try {
+                        for (int a = 0 ; a<detailTAResponse.getSupervisors().size() ; a++){
+                            String dospembimbing = detailTAResponse.getSupervisors().get(a).getName();
+                            list.add(dospembimbing);
+                        }
+                        for (int b = 0; b < listdosen.length; b++){
+                            ((TextView)findViewById(listdosen[b])).setText(list.get(b));
+                        }
+
+                    }catch (IndexOutOfBoundsException e){
+
+                    }
 
                 }
 

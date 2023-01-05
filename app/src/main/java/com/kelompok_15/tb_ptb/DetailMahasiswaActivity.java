@@ -47,6 +47,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         detailIntent = getIntent();
         if (detailIntent != null) {
 
+
             MainInterface mainInterface = RetrofitClient.getService();
             SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.kelompok_15.tb_ptb.SHARED_KEY", MODE_PRIVATE);
             gettoken = sharedPreferences.getString("token", "");
@@ -66,8 +67,8 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 
                     TextView castnama = findViewById(R.id.namaDetailMahasiswa);
                     TextView castNim = findViewById(R.id.nimDetailMahasiswa);
-                    TextView casttnggl = findViewById(R.id.tepattanggallahir2DetailMahasiswa);
-                    TextView casttempat = findViewById(R.id.email2DetailMahasiswa);
+                    TextView casttnggl = findViewById(R.id.email2DetailMahasiswa);
+                    TextView casttempat = findViewById(R.id.tepattanggallahir2DetailMahasiswa);
                     TextView castnohp = findViewById(R.id.noHP2DetailMahasiswa);
 
                     String nama = detailMahasiswa1Response.getStudent().getName();

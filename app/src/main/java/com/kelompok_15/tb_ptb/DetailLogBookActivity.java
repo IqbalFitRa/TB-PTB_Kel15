@@ -11,7 +11,6 @@ import com.kelompok_15.tb_ptb.retrofit.LogbooksItem;
 public class DetailLogBookActivity extends AppCompatActivity {
 
     TextView tanggalDetailLogbook, progressDetailLogbook, problemDetailLogbook, fileDetailLogbook ;
-    //int judulTADetailLogbook,pembimbingDetailLogbook,statusDetailLogbook;
     LogbooksItem logbooks;
 
     @Override
@@ -19,14 +18,10 @@ public class DetailLogBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_log_book);
 
-         //judulTADetailLogbook = findViewById(R.id.judulTADetailLogbook);
-        //abstrakDetailLogbook = findViewById(R.id.abstrakDetailLogbook);
-        // pembimbingDetailLogbook = findViewById(R.id.pembimbingDetailLogbook);
         tanggalDetailLogbook = findViewById(R.id.tanggalDetailLogbook);
         progressDetailLogbook = findViewById(R.id.progressDetailLogbook);
         problemDetailLogbook = findViewById(R.id.problemDetailLogbook);
         fileDetailLogbook = findViewById(R.id.fileDetailLogbook);
-        //statusDetailLogbook = findViewById(R.id.statusDetailLogbook);
 
         Intent listlogbook = getIntent();
         if (listlogbook.getExtras() != null) {
@@ -35,13 +30,11 @@ public class DetailLogBookActivity extends AppCompatActivity {
             String progressDetailLogbookData = logbooks.getProgress();
             String problemDetailLogbookData = logbooks.getProblem();
             String fileDetailLogbookData = logbooks.getFileProgress();
-           // Integer judulTADetailLogbookData = logbooks.getThesisId();
 
             tanggalDetailLogbook.setText(tanggalDetailLogbookData);
             progressDetailLogbook.setText(progressDetailLogbookData);
             problemDetailLogbook.setText(problemDetailLogbookData);
             fileDetailLogbook.setText(fileDetailLogbookData);
-          //  judulTADetailLogbook.setText(judulTADetailLogbookData);
 
         }
     }

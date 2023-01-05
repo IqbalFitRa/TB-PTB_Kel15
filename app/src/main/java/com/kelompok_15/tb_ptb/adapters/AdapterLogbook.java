@@ -34,23 +34,7 @@ public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookV
         notifyDataSetChanged();
     }
 
-    /*ArrayList<Logbook> listLogbook = new ArrayList<>();
-    AdapterLogbook.ItemLogbookClickListener listenerIL;
 
-    public AdapterLogbook(ArrayList<Logbook> listLogbook) {
-        this.listLogbook = listLogbook;
-    }
-
-    public AdapterLogbook(ArrayList<Logbook> listLogbook, ItemLogbookClickListener listenerIL) {
-        this.listLogbook = listLogbook;
-        this.listenerIL = listenerIL;
-    }
-
-    public void setListenerIL(ItemLogbookClickListener listenerIL) {
-
-        this.listenerIL = listenerIL;
-    }
-    */
 
     @NonNull
     @Override
@@ -74,10 +58,7 @@ public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookV
                 clickedItem.ClickedLogbook(logbooks);
             }
         });
-       /* Logbook logbook = listLogbook.get(position);
-        holder.agendaLogbook.setText(logbook.getAgenda());
-        holder.tanggalLogbook.setText(logbook.getTanggal());
-       */
+
     }
 
     public interface ClickedItem{
@@ -91,11 +72,6 @@ public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookV
     }
 
 
-
-    /*public interface ItemLogbookClickListener {
-        void onItemLogbookClick(Logbook logbook);
-    }*/
-
     public class LogbookViewHolder extends RecyclerView.ViewHolder {
 
         public TextView agendaLogbook;
@@ -108,14 +84,6 @@ public class AdapterLogbook extends RecyclerView.Adapter<AdapterLogbook.LogbookV
             agendaLogbook = itemView.findViewById(R.id.agenda_logbook);
             tanggalLogbook = itemView.findViewById(R.id.tanggal_logbook);
 
-           /* itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Logbook logbook = listLogbook.get(getBindingAdapterPosition());
-                    listenerIL.onItemLogbookClick(logbook);
-                }
-            });
-            */
         }
     }
 }

@@ -24,6 +24,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DetailSidangActivity extends AppCompatActivity {
+    ExaminersItem examiners;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,34 +35,47 @@ public class DetailSidangActivity extends AppCompatActivity {
         String token = sharedPreferences.getString("token", "");
 
         MainInterface mainInterface = RetrofitClient.getService();
-        Call<DetailSidangResponse> call = mainInterface.detailSidangTa(277,"Bearer " + token);
+        Call<DetailSidangResponse> call = mainInterface.detailSidangTa(309,"Bearer " + token);
         call.enqueue((new Callback<DetailSidangResponse>() {
             @Override
             public void onResponse(Call<DetailSidangResponse> call, Response<DetailSidangResponse> response) {
                 Log.e("Success", response.toString());
                 
                 DetailSidangResponse detailSidangResponse = response.body();
-                    
-//                    String pembimbing1Sidang = detailSidangResponse.getExaminers().getName();
-//                    String NIPpembimbing1TASidang = detailSidangResponse.getExaminers().getNIP();
+
+//                List<ExaminersItem>  = detailSidangResponse.getExaminers();
+
+                    //String pembimbing1TASidang = ; fileReportSidang
+                    //String NIPpembimbing1TASidang = detailSidangResponse.getExaminers().getNIP();
                 String tanggalSidang = detailSidangResponse.getTrialAt();
                 String jamMulaiSidang = detailSidangResponse.getStartAt();
                 String jamSelesaiSidang = detailSidangResponse.getEndAt();
-//                Object lokasiSidang = detailSidangResponse.getRoomId();
+                String fileSlideSidang = detailSidangResponse.getFileSlide();
+                String fileJurnalSidang = detailSidangResponse.getFileJournal();
+//              Object lokasiSidang = detailSidangResponse.getRoomId();
                 String nilaiSidang = detailSidangResponse.getGrade();
+                //String judulTASidang = detailSidangResponse.getThesisId();
 
+
+                TextView pembimbing1TASidangData = findViewById(R.id.pembimbing1TASidang);
                 TextView tanggalSidangData = findViewById(R.id.tanggalSidang);
                 TextView jamMulaiSidangData = findViewById(R.id.jamMulaiSidang);
                 TextView jamSelesaiSidangData = findViewById(R.id.jamSelesaiSidang);
 //                TextView lokasiSidangData = findViewById(R.id.lokasiSidang);
                 TextView nilaiSidangData = findViewById(R.id.nilaiSidang);
+                TextView fileSlideSidangData = findViewById(R.id.fileSlideSidang);
+                TextView fileJurnalSidangData = findViewById(R.id.fileJurnalSidang);
+               // TextView judulTASidangData = findViewById(R.id.judulTASidang);
 
-
+               // pembimbing1TASidangData.setText(pembimbing1TASidang);
                 tanggalSidangData.setText(tanggalSidang);
                 jamMulaiSidangData.setText(jamMulaiSidang);
                 jamSelesaiSidangData.setText(jamSelesaiSidang);
 //                lokasiSidangData.set(lokasiSidang);
                 nilaiSidangData.setText(nilaiSidang);
+                fileSlideSidangData.setText(fileSlideSidang);
+                fileJurnalSidangData.setText(fileJurnalSidang);
+               // judulTASidangData.setText(judulTASidang);
 
 
             }
